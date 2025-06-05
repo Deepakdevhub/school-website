@@ -10,68 +10,84 @@ collections:
     files:
       - file: "content.json"
         label: "Main Content"
-        name: "content"
+        name: "main_content"
         fields:
-          - { label: "English Content", name: "en", widget: "object", fields: [
-              { label: "School Name", name: "schoolName", widget: "string" },
-              { label: "Bio Title", name: "bioTitle", widget: "string" },
-              { label: "Bio Content", name: "bioContent", widget: "text" },
-              { label: "Faculty Title", name: "facultyTitle", widget: "string" },
-              { label: "Faculty", name: "faculty", widget: "list", fields: [
-                { label: "Name", name: "name", widget: "string" },
-                { label: "Role", name: "role", widget: "string" },
-                { label: "Bio", name: "bio", widget: "text" },
-                { label: "Photo", name: "photo", widget: "image" }
-              ]},
-              { label: "Results Title", name: "resultsTitle", widget: "string" },
-              { label: "Results", name: "results", widget: "object", fields: [
-                { label: "Total Students", name: "total", widget: "string" },
-                { label: "Above 90%", name: "above90", widget: "string" },
-                { label: "Above 80%", name: "above80", widget: "string" },
-                { label: "Above 60%", name: "above60", widget: "string" }
-              ]},
-              { label: "Notice Title", name: "noticeTitle", widget: "string" },
-              { label: "Notices", name: "notices", widget: "list", fields: [
-                { label: "Title", name: "title", widget: "string" },
-                { label: "Date", name: "date", widget: "date" },
-                { label: "Attachment", name: "attachment", widget: "file", required: false }
-              ]},
-              { label: "Address Title", name: "addressTitle", widget: "string" },
-              { label: "Address Content", name: "addressContent", widget: "string" }
+          - { label: "School Name (English)", name: "en_schoolName", widget: "string", required: true }
+          - { label: "School Name (Hindi)", name: "hi_schoolName", widget: "string", required: true }
+          - { label: "Header Background Image", name: "headerBackground", widget: "image", required: true }
+          - { label: "Slideshow Images", name: "slideshow", widget: "list", required: true, fields: [
+              { label: "Image", name: "image", widget: "image", required: true }
             ]}
-          - { label: "Hindi Content", name: "hi", widget: "object", fields: [
-              { label: "School Name", name: "schoolName", widget: "string" },
-              { label: "Bio Title", name: "bioTitle", widget: "string" },
-              { label: "Bio Content", name: "bioContent", widget: "text" },
-              { label: "Faculty Title", name: "facultyTitle", widget: "string" },
-              { label: "Faculty", name: "faculty", widget: "list", fields: [
-                { label: "Name", name: "name", widget: "string" },
-                { label: "Role", name: "role", widget: "string" },
-                { label: "Bio", name: "bio", widget: "text" },
-                { label: "Photo", name: "photo", widget: "image" }
-              ]},
-              { label: "Results Title", name: "resultsTitle", widget: "string" },
-              { label: "Results", name: "results", widget: "object", fields: [
-                { label: "Total Students", name: "total", widget: "string" },
-                { label: "Above 90%", name: "above90", widget: "string" },
-                { label: "Above 80%", name: "above80", widget: "string" },
-                { label: "Above 60%", name: "above60", widget: "string" }
-              ]},
-              { label: "Notice Title", name: "noticeTitle", widget: "string" },
-              { label: "Notices", name: "notices", widget: "list", fields: [
-                { label: "Title", name: "title", widget: "string" },
-                { label: "Date", name: "date", widget: "date" },
-                { label: "Attachment", name: "attachment", widget: "file", required: false }
-              ]},
-              { label: "Address Title", name: "addressTitle", widget: "string" },
-              { label: "Address Content", name: "addressContent", widget: "string" }
-            ]}
-          - { label: "Slideshow Images", name: "slideshow", widget: "list", fields: [
-              { label: "Image", name: "image", widget: "image" }
-            ]}
-          - { label: "Social Links", name: "socialLinks", widget: "object", fields: [
-              { label: "Facebook", name: "facebook", widget: "string" },
-              { label: "Twitter", name: "twitter", widget: "string" },
-              { label: "Instagram", name: "instagram", widget: "string" },
-              { label: "YouTube", name: "youtube", widget: "string" }
-            ]}
+          - label: "English Content"
+            name: "en"
+            widget: "object"
+            required: true
+            fields:
+              - { label: "Bio Title", name: "bioTitle", widget: "string", required: true }
+              - { label: "Bio Content", name: "bioContent", widget: "text", required: true }
+              - { label: "Faculty Title", name: "facultyTitle", widget: "string", required: true }
+              - { label: "Faculty", name: "faculty", widget: "list", required: true, fields: [
+                  { label: "Name", name: "name", widget: "string", required: true },
+                  { label: "Role", name: "role", widget: "string", required: true },
+                  { label: "Bio", name: "bio", widget: "text", required: true },
+                  { label: "Photo", name: "photo", widget: "image", required: true }
+                ]}
+              - { label: "Results Title", name: "resultsTitle", widget: "string", required: true }
+              - label: "Results"
+                name: "results"
+                widget: "object"
+                required: true
+                fields:
+                  - { label: "Total Students", name: "total", widget: "number", required: true }
+                  - { label: "Above 90%", name: "above90", widget: "number", required: true }
+                  - { label: "Above 80%", name: "above80", widget: "number", required: true }
+                  - { label: "Above 60%", name: "above60", widget: "number", required: true }
+              - { label: "Notice Title", name: "noticeTitle", widget: "string", required: true }
+              - { label: "Notices", name: "notices", widget: "list", required: true, fields: [
+                  { label: "Title", name: "title", widget: "string", required: true },
+                  { label: "Date", name: "date", widget: "date", required: true },
+                  { label: "Attachment", name: "attachment", widget: "file", required: false }
+                ]}
+              - { label: "Address Title", name: "addressTitle", widget: "string", required: true }
+              - { label: "Address Content", name: "addressContent", widget: "text", required: true }
+          - label: "Hindi Content"
+            name: "hi"
+            widget: "object"
+            required: true
+            fields:
+              - { label: "Bio Title", name: "bioTitle", widget: "string", required: true }
+              - { label: "Bio Content", name: "bioContent", widget: "text", required: true }
+              - { label: "Faculty Title", name: "facultyTitle", widget: "string", required: true }
+              - { label: "Faculty", name: "faculty", widget: "list", required: true, fields: [
+                  { label: "Name", name: "name", widget: "string", required: true },
+                  { label: "Role", name: "role", widget: "string", required: true },
+                  { label: "Bio", name: "bio", widget: "text", required: true },
+                  { label: "Photo", name: "photo", widget: "image", required: true }
+                ]}
+              - { label: "Results Title", name: "resultsTitle", widget: "string", required: true }
+              - label: "Results"
+                name: "results"
+                widget: "object"
+                required: true
+                fields:
+                  - { label: "Total Students", name: "total", widget: "number", required: true }
+                  - { label: "Above 90%", name: "above90", widget: "number", required: true }
+                  - { label: "Above 80%", name: "above80", widget: "number", required: true }
+                  - { label: "Above 60%", name: "above60", widget: "number", required: true }
+              - { label: "Notice Title", name: "noticeTitle", widget: "string", required: true }
+              - { label: "Notices", name: "notices", widget: "list", required: true, fields: [
+                  { label: "Title", name: "title", widget: "string", required: true },
+                  { label: "Date", name: "date", widget: "date", required: true },
+                  { label: "Attachment", name: "attachment", widget: "file", required: false }
+                ]}
+              - { label: "Address Title", name: "addressTitle", widget: "string", required: true }
+              - { label: "Address Content", name: "addressContent", widget: "text", required: true }
+          - label: "Social Links"
+            name: "socialLinks"
+            widget: "object"
+            required: true
+            fields:
+              - { label: "Facebook", name: "facebook", widget: "string", required: true }
+              - { label: "Twitter", name: "twitter", widget: "string", required: true }
+              - { label: "Instagram", name: "instagram", widget: "string", required: true }
+              - { label: "YouTube", name: "youtube", widget: "string", required: true }
