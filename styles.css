@@ -56,7 +56,7 @@ header {
 #admission-open {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 16px;
   padding: 10px 20px;
   background-color: #FFCA28;
   color: #333; /* Changed text color for better contrast */
