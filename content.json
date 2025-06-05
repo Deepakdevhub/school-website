@@ -70,10 +70,10 @@
     "addressContent": "सरकारी मॉडल स्कूल, सेंट्रल पार्क के पास, मुख्य सड़क, जयपुर, राजस्थान - 302001, भारत। फोन: +91-141-1234567, ईमेल: contact@govmodelschooljaipur.org"
   },
   "slideshow": [
-    "/images/uploads/slide-1.jpg",
-    "/images/uploads/slide-2.jpg",
-    "/images/uploads/slide-3.jpg"
-  ],
+  { "image": "/images/uploads/slide-1.jpg" },
+  { "image": "/images/uploads/slide-2.jpg" },
+  { "image": "/images/uploads/slide-3.jpg" }
+]
   "socialLinks": {
     "facebook": "https://facebook.com/govmodelschool",
     "twitter": "https://twitter.com/govmodelschool",
