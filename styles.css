@@ -23,7 +23,7 @@ body {
 header {
   background-size: cover;
   background-position: center;
-  height: 300px; /* Reduced from 400px to 300px */
+  height: 200px; /* Reduced from 400px to 300px */
   color: white;
   position: relative;
   display: flex;
@@ -42,7 +42,7 @@ header {
 }
 
 #school-name {
-  font-size: 48px;
+  font-size: 52px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
   text-align: center;
