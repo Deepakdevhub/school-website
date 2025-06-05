@@ -31,18 +31,30 @@
 </head>
 <body>
   <header id="header">
-    <h1 id="school-name"></h1>
+    <div class="header-content">
+      <h1 id="school-name"></h1>
+      <button id="admission-open">Admission Open</button>
+      <div id="contact-number" class="contact-number hidden"></div>
+    </div>
     <button id="language-toggle">हिन्दी</button>
   </header>
-  <div id="slideshow"></div>
+  
+  <div class="slideshow-container">
+    <div id="slideshow"></div>
+    <button id="prev-slide" class="slide-nav prev">&lt;</button>
+    <button id="next-slide" class="slide-nav next">&gt;</button>
+  </div>
+
   <section id="bio" class="content-section">
     <h2 id="bio-title"></h2>
     <p id="bio-content"></p>
   </section>
+
   <section id="faculty" class="content-section">
     <h2 id="faculty-title"></h2>
     <div id="faculty-grid"></div>
   </section>
+
   <section id="results" class="content-section">
     <h2 id="results-title"></h2>
     <p>Total Students: <span id="total-students"></span></p>
@@ -50,17 +62,21 @@
     <p>Above 80%: <span id="above-80"></span></p>
     <p>Above 60%: <span id="above-60"></span></p>
   </section>
+
   <section id="notices" class="content-section">
     <h2 id="notice-title"></h2>
     <ul id="notice-list"></ul>
   </section>
+
   <section id="address" class="content-section">
     <h2 id="address-title"></h2>
     <p id="address-content"></p>
   </section>
+
   <footer>
     <div id="social-links"></div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
