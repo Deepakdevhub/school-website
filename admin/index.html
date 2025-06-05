@@ -9,26 +9,13 @@
   <!-- Load Netlify Identity Widget for GitHub OAuth -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   
-  <!-- Load Netlify CMS (updated version to fix slideshow upload issue) -->
+  <!-- Load Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
   
-  <!-- Custom script to initialize Netlify Identity and handle redirects -->
+  <!-- Custom script to initialize Netlify Identity -->
   <script>
-    // Initialize Netlify Identity
     if (window.netlifyIdentity) {
       netlifyIdentity.init();
-      
-      // Handle redirect after password recovery (if using Netlify Identity in the future)
-      netlifyIdentity.on('init', user => {
-        if (!user) {
-          const token = window.location.hash.match(/recovery_token=([^&]+)/);
-          if (token && token[1]) {
-            window.location.href = `/admin/#/recover?token=${token[1]}`;
-          }
-        }
-      });
-      
-      // Redirect to admin after login
       netlifyIdentity.on('login', () => {
         document.location.href = '/admin/';
       });
