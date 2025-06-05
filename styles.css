@@ -21,14 +21,18 @@ body {
 
 /* Header styles */
 header {
-  background-size: cover;
-  background-position: center;
-  height: 200px; /* Reduced from 400px to 300px */
+  /* Removed background-size and background-position since no background image */
+  /* background-size: cover; */
+  /* background-position: center; */
+  background: linear-gradient(135deg, #1E88E5, #1565C0); /* Added professional gradient background */
+  height: 300px;
   color: white;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+  margin-bottom: 40px; /* Added space between header and slideshow */
 }
 
 .header-content {
@@ -37,29 +41,31 @@ header {
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  padding: 0 20px;
+  padding: 20px; /* Increased padding for better spacing */
   position: relative;
 }
 
 #school-name {
-  font-size: 52px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 48px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adjusted shadow for better contrast */
   margin-bottom: 20px;
   text-align: center;
+  font-weight: 700; /* Made the font bolder for professionalism */
 }
 
 #admission-open {
   position: absolute;
   top: 20px;
-  right: 20px; /* Added missing value for right positioning */
+  right: 20px;
   padding: 10px 20px;
   background-color: #FFCA28;
-  color: white;
-  border: none;
+  color: #333; /* Changed text color for better contrast */
+  border: 2px solid #FFB300; /* Added border for emphasis */
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
+  transition: background-color 0.3s, transform 0.1s; /* Added transition for hover effect */
 }
 
 .blinking {
@@ -73,7 +79,8 @@ header {
 }
 
 #admission-open:hover {
-  background-color: #ffb300;
+  background-color: #FFB300;
+  transform: scale(1.05); /* Slight scale effect on hover */
 }
 
 .contact-number {
@@ -99,16 +106,19 @@ header {
   top: 20px;
   left: 20px;
   padding: 10px 20px;
-  background-color: #1E88E5;
-  color: white;
-  border: none;
+  background-color: #fff; /* Changed to white for contrast */
+  color: #1E88E5; /* Text color matches the header gradient */
+  border: 2px solid #1E88E5; /* Added border for emphasis */
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 #language-toggle:hover {
-  background-color: #1565C0;
+  background-color: #1E88E5;
+  color: #fff;
 }
 
 /* Slideshow styles */
@@ -117,6 +127,9 @@ header {
   width: 100%;
   height: 400px;
   overflow: hidden;
+  border: 8px solid #1E88E5; /* Added thick border */
+  border-radius: 10px; /* Rounded corners for the border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added subtle shadow for depth */
 }
 
 #slideshow img {
@@ -354,7 +367,7 @@ footer p {
   }
 
   header {
-    height: 250px; /* Reduced from 350px to 250px */
+    height: 250px;
   }
 
   .slideshow-container {
@@ -418,7 +431,7 @@ footer p {
   }
 
   header {
-    height: 200px; /* Reduced from 250px to 200px */
+    height: 200px;
   }
 
   .slideshow-container {
