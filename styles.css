@@ -25,7 +25,7 @@ header {
   /* background-size: cover; */
   /* background-position: center; */
   background: linear-gradient(135deg, #1E88E5, #1565C0); /* Added professional gradient background */
-  height: 200px;
+  height: 190px;
   color: white;
   position: relative;
   display: flex;
@@ -103,8 +103,8 @@ header {
 
 #language-toggle {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 2px;
+  left: 2px;
   padding: 10px 20px;
   background-color: #fff; /* Changed to white for contrast */
   color: #1E88E5; /* Text color matches the header gradient */
