@@ -1,9 +1,10 @@
 backend:
-  name: git-gateway
-  branch: main
-
+  name: github
+  repo: Deepakdevhub/school-website
+  branch: mater
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
+collections:
 
 collections:
   - name: "content"
