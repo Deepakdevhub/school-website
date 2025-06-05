@@ -1,63 +1,90 @@
-/* style.css - Styles for GSS Budhwali website */
+/* style.css - Modern and responsive styles for GSSS Budhwali website */
 
 /* Reset default styles */
-body {
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Hindi font for Devanagari script */
+[lang="hi"] {
+  font-family: 'Noto Sans Devanagari', sans-serif;
 }
 
 /* Header styles */
 header {
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: 500px;
   color: white;
-  text-align: center;
-  padding: 100px 20px;
   position: relative;
-}
-
-.header-content {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+}
+
+.header-content {
+  text-align: center;
+  position: flex;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
 #school-name {
-  margin: 0;
-  font-size: 3em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 48px;
+  text-shadow: center;
+  margin-bottom: 20px;
+  text-align: left;
+  flex-grow: 1;
 }
 
 #admission-open {
-  margin-left: 20px;
-  padding: 10px 20px;
-  background-color: #28a745;
+  position: absolute;
+  top: 20px;
+  right:  padding: 10px 20px;
+  background-color: #FFCA28;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.blinking {
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.5;
+  }
 }
 
 #admission-open:hover {
-  background-color: #218838;
+  background-color: #ffb300;
 }
 
 .contact-number {
   display: none;
   position: absolute;
   top: 100%;
-  right: 0;
+  right: 20px;
   background-color: #fff;
   color: #333;
-  padding: 10px;
+  padding: 5px 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0,0.2);
   z-index: 10;
 }
 
@@ -68,37 +95,37 @@ header {
 #language-toggle {
   position: absolute;
   top: 20px;
-  right: 20px;
+  left: 20px;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #1E88E5;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 16px;
 }
 
 #language-toggle:hover {
-  background-color: #0056b3;
+  background-color: #1565C0;
 }
 
 /* Slideshow styles */
 .slideshow-container {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 400px;
   overflow: hidden;
-}
-
-#slideshow {
-  width: 100%;
-  height: 100%;
 }
 
 #slideshow img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: none;
+}
+
+#slideshow img.active {
+  display: block;
 }
 
 .slide-nav {
@@ -108,9 +135,10 @@ header {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 10px 15px;
   cursor: pointer;
-  font-size: 1.5em;
+  font-size: 20px;
+  transition: background-color 0.3s;
 }
 
 .prev {
@@ -126,36 +154,45 @@ header {
 }
 
 /* Section styles */
-section {
-  padding: 40px 20px;
+.content-section {
+  padding: 60px 20px;
   max-width: 1200px;
   margin: 0 auto;
+  background-color: #F5F7FA;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #333;
+  font-size: 32px;
+  color: #1E88E5;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 /* Bio section */
 #bio {
-  background-color: #f8f9fa;
+  text-align: center;
+}
+
+#bio p {
+  font-size: 18px;
+  color: #555;
 }
 
 /* Faculty section */
 #faculty-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
 #faculty-grid div {
-  text-align: center;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
   background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #faculty-grid img {
@@ -163,26 +200,77 @@ h2 {
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
+  loading: lazy;
 }
 
 #faculty-grid h3 {
+  font-size: 18px;
+  color: #1E88E5;
   margin: 10px 0 5px;
-  font-size: 1.2em;
-  color: #007bff;
 }
 
 #faculty-grid p {
-  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Toppers section */
+#toppers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+#toppers-grid div {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#toppers-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  loading: lazy;
+}
+
+#toppers-grid h3 {
+  font-size: 18px;
+  color: #1E88E5;
+  margin: 10px 0 5px;
+}
+
+#toppers-grid p {
+  font-size: 14px;
   color: #666;
 }
 
 /* Results section */
-#results {
-  background-color: #f8f9fa;
+#results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
-#results p {
-  margin: 5px 0;
+#results-table th,
+#results-table td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+#results-table th {
+  background-color: #1E88E5;
+  color: white;
+  font-size: 16px;
+}
+
+#results-table td {
+  background-color: white;
+  font-size: 16px;
 }
 
 /* Notices section */
@@ -192,16 +280,15 @@ h2 {
 }
 
 #notice-list li {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-#notice-list li:last-child {
-  border-bottom: none;
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #notice-list a {
-  color: #007bff;
+  color: #1E88E5;
   text-decoration: none;
   margin-left: 10px;
 }
@@ -210,60 +297,82 @@ h2 {
   text-decoration: underline;
 }
 
-/* Address section */
-#address {
-  background-color: #f8f9fa;
+/* Contact section */
+#contact {
+  text-align: center;
+}
+
+#contact p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+#map-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1E88E5;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#map-link:hover {
+  background-color: #1565C0;
 }
 
 /* Footer styles */
 footer {
-  background-color: #333;
+  background-color: #1E88E5;
   color: white;
-  padding: 20px;
   text-align: center;
+  padding: 20px;
 }
 
 #social-links a {
-  margin: 0 10px;
-  color: #007bff;
+  color: #FFCA28;
+  margin: 0 15px;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 16px;
 }
 
 #social-links a:hover {
-  color: #0056b3;
+  color: #ffb300;
 }
 
-/* Loading spinner styles */
-#loading {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 18px;
-  color: #333;
+footer p {
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  #faculty-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   header {
+    height: 400px;
+  }
+
+  .slideshow-container {
     height: 300px;
-    padding: 50px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #school-name {
+    font-size: 36px;
+  }
+
+  #admission-open,
+  #language-toggle {
+    padding: 8px 15px;
+    font-size: 14px;
   }
 
   .header-content {
     flex-direction: column;
-    align-items: center;
-  }
-
-  #school-name {
-    font-size: 2em;
-  }
-
-  #admission-open {
-    margin-left: 0;
-    margin-top: 10px;
-    padding: 8px 15px;
   }
 
   .contact-number {
@@ -271,21 +380,55 @@ footer {
     margin-top: 10px;
   }
 
-  #language-toggle {
-    top: 10px;
-    right: 10px;
-    padding: 8px 15px;
+  #faculty-grid,
+  #toppers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  #bio p,
+  #contact p {
+    font-size: 16px;
+  }
+
+  #results-table th,
+  #results-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .slideshow-container {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  #school-name {
+    font-size: 28px;
+  }
+
+  #faculty-grid,
+  #toppers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    height: 300px;
   }
 
   .slideshow-container {
     height: 200px;
   }
 
-  section {
-    padding: 20px;
+  h2 {
+    font-size: 24px;
   }
 
-  h2 {
-    font-size: 1.5em;
+  #bio p,
+  #contact p {
+    font-size: 14px;
   }
 }
