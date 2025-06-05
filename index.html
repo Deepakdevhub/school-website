@@ -4,30 +4,31 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GSSS Budhwali - Government Senior Secondary School Budhwali, Rajasthan</title>
-  <meta name="description" content="GSSS Budhwali is a premier government senior secondary school in Budhwali, Rajasthan, offering quality education. Learn about our faculty, academic results, notices, and more." />
-  <meta name="keywords" content="govt school budhwali, budhwali, gsssbudhwali, government senior secondary school budhwali, education rajasthan, school budhwali rajasthan" />
+  <meta name="description" content="GSSS Budhwali offers quality education in Budhwali, Rajasthan. Explore our faculty, toppers, academic results, notices, and contact details." />
+  <meta name="keywords" content="gsss budhwali, government school budhwali, education rajasthan, school budhwali rajasthan, faculty, toppers, results" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="GSSS Budhwali Administration" />
   <meta property="og:title" content="GSSS Budhwali - Government Senior Secondary School Budhwali, Rajasthan" />
-  <meta property="og:description" content="Explore GSSS Budhwali, a leading government school in Budhwali, Rajasthan. Discover our faculty, academic achievements, and latest notices." />
+  <meta property="og:description" content="Discover GSSS Budhwali, a leading government school in Budhwali, Rajasthan, with excellent faculty, toppers, and academic results." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://gssbudhwali.netlify.app/" />
   <meta property="og:image" content="https://gssbudhwali.netlify.app/images/uploads/campus.jpg" />
   <meta property="og:site_name" content="GSSS Budhwali" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="GSSS Budhwali - Government Senior Secondary School Budhwali, Rajasthan" />
-  <meta name="twitter:description" content="Explore GSSS Budhwali, a leading government school in Budhwali, Rajasthan. Discover our faculty, academic achievements, and latest notices." />
+  <meta name="twitter:description" content="Discover GSSS Budhwali, a leading government school in Budhwali, Rajasthan, with excellent faculty, toppers, and academic results." />
   <meta name="twitter:image" content="https://gssbudhwali.netlify.app/images/uploads/campus.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header id="header">
     <div class="header-content">
       <h1 id="school-name"></h1>
-      <button id="admission-open">Admission Open</button>
+      <button id="admission-open" class="blinking">Admission Open</button>
       <div id="contact-number" class="contact-number hidden"></div>
+      <button id="language-toggle">हिन्दी</button>
     </div>
-    <button id="language-toggle">हिन्दी</button>
   </header>
   <div class="slideshow-container">
     <div id="slideshow"></div>
@@ -42,23 +43,43 @@
     <h2 id="faculty-title"></h2>
     <div id="faculty-grid"></div>
   </section>
+  <section id="toppers" class="content-section">
+    <h2 id="toppers-title"></h2>
+    <div id="toppers-grid"></div>
+  </section>
   <section id="results" class="content-section">
     <h2 id="results-title"></h2>
-    <p>Total Students: <span id="total-students"></span></p>
-    <p>Above 90%: <span id="above-90"></span></p>
-    <p>Above 80%: <span id="above-80"></span></p>
-    <p>Above 60%: <span id="above-60"></span></p>
+    <table id="results-table">
+      <thead>
+        <tr>
+          <th>Total Students</th>
+          <th>Above 80%</th>
+          <th>Above 60%</th>
+          <th>Pass Percentage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="total-students"></td>
+          <td id="above-80"></td>
+          <td id="above-60"></td>
+          <td id="pass-percentage"></td>
+        </tr>
+      </tbody>
+    </table>
   </section>
   <section id="notices" class="content-section">
     <h2 id="notice-title"></h2>
     <ul id="notice-list"></ul>
   </section>
-  <section id="address" class="content-section">
-    <h2 id="address-title"></h2>
-    <p id="address-content"></p>
+  <section id="contact" class="content-section">
+    <h2 id="contact-title"></h2>
+    <p id="contact-address"></p>
+    <a id="map-link" href="" target="_blank">View on Google Maps</a>
   </section>
   <footer>
     <div id="social-links"></div>
+    <p>&copy; 2025 GSSS Budhwali. All rights reserved.</p>
   </footer>
   <script src="script.js"></script>
 </body>
