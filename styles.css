@@ -1,40 +1,291 @@
+/* style.css - Styles for GSS Budhwali website */
+
+/* Reset default styles */
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
-.slideshow-container {
+/* Header styles */
+header {
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.header-content {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.slide {
-  min-width: 100%;
+#school-name {
+  margin: 0;
+  font-size: 3em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#admission-open {
+  margin-left: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+#admission-open:hover {
+  background-color: #218838;
+}
+
+.contact-number {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  color: #333;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.contact-number.visible {
+  display: block;
+}
+
+#language-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+#language-toggle:hover {
+  background-color: #0056b3;
+}
+
+/* Slideshow styles */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+#slideshow {
+  width: 100%;
+  height: 100%;
+}
+
+#slideshow img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+.slide-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.5em;
 }
 
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+.prev {
+  left: 10px;
 }
 
-.notice-card {
-  background: #f9fafb;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.next {
+  right: 10px;
 }
 
+.slide-nav:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Section styles */
+section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Bio section */
+#bio {
+  background-color: #f8f9fa;
+}
+
+/* Faculty section */
+#faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+#faculty-grid div {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+}
+
+#faculty-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#faculty-grid h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+  color: #007bff;
+}
+
+#faculty-grid p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* Results section */
+#results {
+  background-color: #f8f9fa;
+}
+
+#results p {
+  margin: 5px 0;
+}
+
+/* Notices section */
+#notice-list {
+  list-style: none;
+  padding: 0;
+}
+
+#notice-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#notice-list li:last-child {
+  border-bottom: none;
+}
+
+#notice-list a {
+  color: #007bff;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+#notice-list a:hover {
+  text-decoration: underline;
+}
+
+/* Address section */
+#address {
+  background-color: #f8f9fa;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+#social-links a {
+  margin: 0 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+#social-links a:hover {
+  color: #0056b3;
+}
+
+/* Loading spinner styles */
+#loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  color: #333;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
+  header {
+    height: 300px;
+    padding: 50px 20px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #school-name {
+    font-size: 2em;
+  }
+
+  #admission-open {
+    margin-left: 0;
+    margin-top: 10px;
+    padding: 8px 15px;
+  }
+
+  .contact-number {
+    position: static;
+    margin-top: 10px;
+  }
+
+  #language-toggle {
+    top: 10px;
+    right: 10px;
+    padding: 8px 15px;
+  }
+
   .slideshow-container {
     height: 200px;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.5em;
   }
 }
