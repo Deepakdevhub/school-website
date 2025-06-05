@@ -18,11 +18,15 @@
   "slideshow": [
     {
       "image": "/images/uploads/1.png"
+    },
+    {
+      "image": "/images/uploads/2.png"
     }
   ],
   "hi": {
     "noticeTitle": "lkjj",
     "resultsTitle": "bmbs",
+    "faculty": [],
     "addressTitle": "kjh",
     "addressContent": "hjk",
     "bioTitle": "cdcs",
