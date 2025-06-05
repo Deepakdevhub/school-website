@@ -21,14 +21,19 @@ function loadContent() {
 
       const slideshowContainer = document.querySelector('.slideshow-container');
       slideshowContainer.innerHTML = '';
-      if (data.slideshow && data.slideshow.length > 0) {
-        data.slideshow.forEach(src => {
-          const img = document.createElement('img');
-          img.src = src;
-          img.className = 'slide';
-          slideshowContainer.appendChild(img);
-        });
-      } else {
+     if (data.slideshow && data.slideshow.length > 0) {
+  const slideshow = document.getElementById('slideshow');
+  let currentSlide = 0;
+  function showSlide(index) {
+    slideshow.innerHTML = `<img src="${data.slideshow[index].image}" alt="Slide ${index + 1}">`; // Changed to data.slideshow[index].image
+  }
+  showSlide(currentSlide);
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % data.slideshow.length;
+    showSlide(currentSlide);
+  }, 5000);
+}
+      else {
         slideshowContainer.innerHTML = '<p class="text-center text-gray-600">No slideshow images available.</p>';
       }
 
