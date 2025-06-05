@@ -6,13 +6,14 @@
   <title>Netlify CMS</title>
 </head>
 <body>
+  <!-- Netlify Identity Widget (already added for GitHub OAuth) -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <!-- Updated Netlify CMS version -->
+  <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
+  <!-- Custom script for redirect handling (if added earlier) -->
   <script>
-    // Initialize Netlify Identity
     if (window.netlifyIdentity) {
       netlifyIdentity.init();
-      // Handle redirect after password recovery
       netlifyIdentity.on('init', user => {
         if (!user) {
           const token = window.location.hash.match(/recovery_token=([^&]+)/);
