@@ -16,13 +16,15 @@ fetch('content.json')
     // Initial render
     renderContent(currentLang);
 
-    // Set up header background
+    // Set up header background (commented out since background is now set in CSS)
+    /*
     const header = document.querySelector('header');
     if (data.headerBackground) {
       header.style.backgroundImage = `url('${data.headerBackground}')`;
     } else {
       console.warn('Header background image not set in content.json');
     }
+    */
 
     // Set up admission button
     const admissionButton = document.getElementById('admission-open');
