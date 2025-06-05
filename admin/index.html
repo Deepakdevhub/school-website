@@ -3,17 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Netlify CMS</title>
+  <title>Netlify CMS - GSS Budhwali</title>
 </head>
 <body>
-  <!-- Netlify Identity Widget (already added for GitHub OAuth) -->
+  <!-- Load Netlify Identity Widget for GitHub OAuth -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <!-- Updated Netlify CMS version -->
+  
+  <!-- Load Netlify CMS (updated version to fix slideshow upload issue) -->
   <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
-  <!-- Custom script for redirect handling (if added earlier) -->
+  
+  <!-- Custom script to initialize Netlify Identity and handle redirects -->
   <script>
+    // Initialize Netlify Identity
     if (window.netlifyIdentity) {
       netlifyIdentity.init();
+      
+      // Handle redirect after password recovery (if using Netlify Identity in the future)
       netlifyIdentity.on('init', user => {
         if (!user) {
           const token = window.location.hash.match(/recovery_token=([^&]+)/);
@@ -21,6 +26,11 @@
             window.location.href = `/admin/#/recover?token=${token[1]}`;
           }
         }
+      });
+      
+      // Redirect to admin after login
+      netlifyIdentity.on('login', () => {
+        document.location.href = '/admin/';
       });
     }
   </script>
