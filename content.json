@@ -1,83 +1,45 @@
 {
   "en": {
-    "schoolName": "Government Model School",
-    "bioTitle": "About Our School",
-    "bioContent": "Government Model School, established in 1980, is a premier educational institution in Jaipur, Rajasthan. We are dedicated to providing quality education to students in a nurturing environment. Our aim is to foster academic excellence, moral values, and holistic development, ensuring every child reaches their full potential. The school is affiliated with the Rajasthan Board of Secondary Education and has been a pillar of the community for over four decades, serving more than 1,200 students annually. We offer a range of extracurricular activities including sports, arts, and cultural programs to ensure all-round development.",
-    "facultyTitle": "Our Faculty",
-    "faculty": [
-      { "name": "Mr. Anil Sharma", "role": "Principal", "bio": "With over 20 years of experience in education, Mr. Sharma leads our school with dedication and vision.", "photo": "/images/uploads/faculty-1.jpg" },
-      { "name": "Ms. Priya Singh", "role": "Mathematics Teacher", "bio": "Ms. Singh specializes in making math engaging for students with innovative teaching methods.", "photo": "/images/uploads/faculty-2.jpg" },
-      { "name": "Mr. Rajesh Kumar", "role": "Science Teacher", "bio": "Mr. Kumar inspires students with hands-on science experiments and practical learning.", "photo(cards) photo": "/images/uploads/faculty-3.jpg" },
-      { "name": "Ms. Neha Gupta", "role": "English Teacher", "bio": "Ms. Gupta focuses on improving language skills through interactive methods and literature.", "photo": "/images/uploads/faculty-4.jpg" },
-      { "name": "Mr. Sanjay Patel", "role": "History Teacher", "bio": "Mr. Patel brings history to life with storytelling and historical field trips.", "photo": "/images/uploads/faculty-5.jpg" },
-      { "name": "Ms. Kavita Sharma", "role": "Hindi Teacher", "bio": "Ms. Sharma promotes Hindi literature and culture through poetry and drama.", "photo": "/images/uploads/faculty-6.jpg" },
-      { "name": "Mr. Vikram Singh", "role": "Physical Education", "bio": "Mr. Singh encourages fitness and teamwork through sports and outdoor activities.", "photo": "/images/uploads/faculty-7.jpg" },
-      { "name": "Ms. Anjali Verma", "role": "Art Teacher", "bio": "Ms. Verma nurtures creativity through art projects and exhibitions.", "photo": "/images/uploads/faculty-8.jpg" },
-      { "name": "Mr. Deepak Yadav", "role": "Computer Science", "bio": "Mr. Yadav introduces students to technology and coding with practical lessons.", "photo": "/images/uploads/faculty-9.jpg" },
-      { "name": "Ms. Ritu Mehra", "role": "Chemistry Teacher", "bio": "Ms. Mehra makes chemistry accessible with practical examples and lab experiments.", "photo": "/images/uploads/faculty-10.jpg" },
-      { "name": "Mr. Amit Joshi", "role": "Geography Teacher", "bio": "Mr. Joshi teaches about the world through maps, field trips, and environmental studies.", "photo": "/images/uploads/faculty-11.jpg" },
-      { "name": "Ms. Shalini Kapoor", "role": "Librarian", "bio": "Ms. Kapoor fosters a love for reading among students with a well-stocked library.", "photo": "/images/uploads/faculty-12.jpg" }
-    ],
-    "resultsTitle": "Previous Year Results (2024)",
+    "noticeTitle": "sdfds",
+    "resultsTitle": "dfdsf",
+    "addressTitle": "dvd",
+    "addressContent": "dds",
+    "bioTitle": "hi",
+    "bioContent": "dadss",
+    "facultyTitle": "sdsad",
     "results": {
-      "total": "500",
-      "above90": "50",
-      "above80": "120",
-      "above60": "300"
+      "total": "cds",
+      "above90": "fdsf",
+      "above80": "dfds",
+      "above60": "gfd"
     },
-    "noticeTitle": "Notice Board",
-    "notices": [
-      { "title": "Parent-Teacher Meeting", "date": "2025-06-10", "attachment": "/images/uploads/meeting.pdf" },
-      { "title": "Annual Sports Day", "date": "2025-06-15", "attachment": "" },
-      { "title": "Science Exhibition", "date": "2025-06-20", "attachment": "/images/uploads/exhibition.pdf" }
-    ],
-    "addressTitle": "Contact Us",
-    "addressContent": "Government Model School, Near Central Park, Main Road, Jaipur, Rajasthan - 302001, India. Phone: +91-141-1234567, Email: contact@govmodelschooljaipur.org"
-  },
-  "hi": {
-    "schoolName": "सरकारी मॉडल स्कूल",
-    "bioTitle": "हमारे स्कूल के बारे में",
-    "bioContent": "सरकारी मॉडल स्कूल, 1980 में स्थापित, जयपुर, राजस्थान में एक प्रमुख शैक्षणिक संस्थान है। हम एक पोषण वातावरण में छात्रों को गुणवत्तापूर्ण शिक्षा प्रदान करने के लिए समर्पित हैं। हमारा उद्देश्य शैक्षणिक उत्कृष्टता, नैतिक मूल्यों और समग्र विकास को बढ़ावा देना है, यह सुनिश्चित करते हुए कि प्रत्येक बच्चा अपनी पूरी क्षमता तक पहुंचे। स्कूल राजस्थान माध्यमिक शिक्षा बोर्ड से संबद्ध है और चार दशकों से अधिक समय से समुदाय का एक स्तंभ रहा है, जो प्रतिवर्ष 1,200 से अधिक छात्रों को सेवा प्रदान करता है। हम खेल, कला और सांस्कृतिक कार्यक्रमों सहित कई पाठ्येतर गतिविधियाँ प्रदान करते हैं ताकि सर्वांगीण विकास सुनिश्चित हो सके।",
-    "facultyTitle": "हमारा संकाय",
-    "faculty": [
-      { "name": "श्री अनिल शर्मा", "role": "प्राचार्य", "bio": "20 से अधिक वर्षों के अनुभव के साथ, श्री शर्मा हमारे स्कूल का नेतृत्व समर्पण और दूरदर्शिता के साथ करते हैं।", "photo": "/images/uploads/faculty-1.jpg" },
-      { "name": "सुश्री प्रिया सिंह", "role": "गणित शिक्षक", "bio": "सुश्री सिंह नवीन शिक्षण विधियों के साथ छात्रों के लिए गणित को रोचक बनाती हैं।", "photo": "/images/uploads/faculty-2.jpg" },
-      { "name": "श्री राजेश कुमार", "role": "विज्ञान शिक्षक", "bio": "श्री कुमार प्रायोगिक विज्ञान प्रयोगों और व्यावहारिक शिक्षा से छात्रों को प्रेरित करते हैं।", "photo": "/images/uploads/faculty-3.jpg" },
-      { "name": "सुश्री नेहा गुप्ता", "role": "अंग्रेजी शिक्षक", "bio": "सुश्री गुप्ता इंटरैक्टिव तरीकों और साहित्य के माध्यम से भाषा कौशल में सुधार पर ध्यान देती हैं।", "photo": "/images/uploads/faculty-4.jpg" },
-      { "name": "श्री संजय पटेल", "role": "इतिहास शिक्षक", "bio": "श्री पटेल कहानी कहने और ऐतिहासिक क्षेत्र यात्राओं के माध्यम से इतिहास को जीवंत करते हैं।", "photo": "/images/uploads/faculty-5.jpg" },
-      { "name": "सुश्री कविता शर्मा", "role": "हिन्दी शिक्षक", "bio": "सुश्री शर्मा कविता और नाटक के माध्यम से हिन्दी साहित्य और संस्कृति को बढ़ावा देती हैं।", "photo": "/images/uploads/faculty-6.jpg" },
-      { "name": "श्री विक्रम सिंह", "role": "शारीरिक शिक्षा", "bio": "श्री सिंह खेल और बाहरी गतिविधियों के माध्यम से फिटनेस और टीमवर्क को प्रोत्साहित करते हैं।", "photo": "/images/uploads/faculty-7.jpg" },
-      { "name": "सुश्री अंजलि वर्मा", "role": "कला शिक्षक", "bio": "सुश्री वर्मा कला परियोजनाओं और प्रदर्शनियों के माध्यम से रचनात्मकता को पोषित करती हैं।", "photo": "/images/uploads/faculty-8.jpg" },
-      { "name": "श्री दीपक यादव", "role": "कंप्यूटर विज्ञान", "bio": "श्री यादव व्यावहारिक पाठों के साथ छात्रों को प्रौद्योगिकी और कोडिंग से परिचित कराते हैं।", "photo": "/images/uploads/faculty-9.jpg" },
-      { "name": "सुश्री रितु मेहरा", "role": "रसायन विज्ञान शिक्षक", "bio": "सुश्री मेहरा व्यावहारिक उदाहरणों और प्रयोगशाला प्रयोगों के साथ रसायन विज्ञान को सुलभ बनाती हैं।", "photo": "/images/uploads/faculty-10.jpg" },
-      { "name": "श्री अमित जोशी", "role": "भूगोल शिक्षक", "bio": "श्री जोशी नक्शों, क्षेत्र यात्राओं और पर्यावरण अध्ययन के माध्यम से विश्व के बारे में सिखाते हैं।", "photo": "/images/uploads/faculty-11.jpg" },
-      { "name": "सुश्री शालिनी कपूर", "role": "पुस्तकालयाध्यक्ष", "bio": "सुश्री कपूर एक अच्छी तरह से सुसज्जित पुस्तकालय के साथ छात्रों में पढ़ने की रुचि को बढ़ावा देती हैं।", "photo": "/images/uploads/faculty-12.jpg" }
-    ],
-    "resultsTitle": "पिछले वर्ष के परिणाम (2024)",
-    "results": {
-      "total": "500",
-      "above90": "50",
-      "above80": "120",
-      "above60": "300"
-    },
-    "noticeTitle": "सूचना पटल",
-    "notices": [
-      { "title": "अभिभावक-शिक्षक बैठक", "date": "2025-06-10", "attachment": "/images/uploads/meeting.pdf" },
-      { "title": "वार्षिक खेल दिवस", "date": "2025-06-15", "attachment": "" },
-      { "title": "विज्ञान प्रदर्शनी", "date": "2025-06-20", "attachment": "/images/uploads/exhibition.pdf" }
-    ],
-    "addressTitle": "संपर्क करें",
-    "addressContent": "सरकारी मॉडल स्कूल, सेंट्रल पार्क के पास, मुख्य सड़क, जयपुर, राजस्थान - 302001, भारत। फोन: +91-141-1234567, ईमेल: contact@govmodelschooljaipur.org"
+    "schoolName": "dsadads"
   },
   "slideshow": [
-  { "image": "/images/uploads/slide-1.jpg" },
-  { "image": "/images/uploads/slide-2.jpg" },
-  { "image": "/images/uploads/slide-3.jpg" }
-]
+    {
+      "image": "/images/uploads/1.png"
+    }
+  ],
+  "hi": {
+    "noticeTitle": "lkjj",
+    "resultsTitle": "bmbs",
+    "addressTitle": "kjh",
+    "addressContent": "hjk",
+    "bioTitle": "cdcs",
+    "bioContent": "xcds",
+    "facultyTitle": "sds",
+    "results": {
+      "total": "kn",
+      "above90": ",",
+      "above80": "jjk",
+      "above60": "kkj"
+    },
+    "schoolName": "dsfds"
+  },
   "socialLinks": {
-    "facebook": "https://facebook.com/govmodelschool",
-    "twitter": "https://twitter.com/govmodelschool",
-    "instagram": "https://instagram.com/govmodelschool",
-    "youtube": "https://youtube.com/govmodelschool"
+    "facebook": "jkhj",
+    "twitter": "kjkj",
+    "instagram": "bjjk",
+    "youtube": "khjk"
   }
 }
