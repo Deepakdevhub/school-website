@@ -1,68 +1,81 @@
 {
   "en_schoolName": "GSSS Budhwali",
   "hi_schoolName": "जीएसएसएस बुढ़वाली",
-  "headerBackground": "",
+  "headerBackground": "/images/uploads/campus.jpg",
   "contactNumber": "+91 12345 67890",
   "slideshow": [],
+  "results": {
+    "totalStudents": 200,
+    "above80": 80,
+    "above60": 150,
+    "passPercentage": "95%"
+  },
+  "mapLink": "https://maps.google.com/?q=GSSS+Budhwali,+Budhwali+Village,+Rajasthan,+India",
   "en": {
-    "bioTitle": "About Us",
-    "bioContent": "GSSS Budhwali is a premier government senior secondary school in Budhwali, Rajasthan, dedicated to providing quality education to students.",
+    "bioTitle": "About GSSS Budhwali",
+    "bioContent": "GSSS Budhwali is a premier government senior secondary school located in Budhwali, Rajasthan. We are committed to providing quality education and fostering holistic development for our students.",
     "facultyTitle": "Our Faculty",
     "faculty": [
-      {
-        "name": "John Doe",
-        "role": "Principal",
-        "bio": "With over 20 years of experience in education, Mr. Doe leads GSSS Budhwali with a vision for excellence.",
-        "photo": "/images/uploads/faculty-1.jpg"
-      },
-      {
-        "name": "Jane Smith",
-        "role": "Mathematics Teacher",
-        "bio": "Ms. Smith has a passion for teaching math and has been with GSSS Budhwali for 10 years.",
-        "photo": "/images/uploads/faculty-2.jpg"
-      }
+      {"name": "John Doe", "role": "Principal", "bio": "20+ years in education.", "photo": "/images/uploads/faculty-1.jpg"},
+      {"name": "Jane Smith", "role": "Math Teacher", "bio": "10 years teaching math.", "photo": "/images/uploads/faculty-2.jpg"},
+      {"name": "Alice Johnson", "role": "Science Teacher", "bio": "15 years in science education.", "photo": "/images/uploads/faculty-3.jpg"},
+      {"name": "Bob Brown", "role": "English Teacher", "bio": "12 years teaching English.", "photo": "/images/uploads/faculty-4.jpg"},
+      {"name": "Sarah Davis", "role": "Hindi Teacher", "bio": "8 years teaching Hindi.", "photo": "/images/uploads/faculty-5.jpg"},
+      {"name": "Michael Lee", "role": "Social Studies Teacher", "bio": "14 years in education.", "photo": "/images/uploads/faculty-6.jpg"},
+      {"name": "Emily Clark", "role": "Physical Education", "bio": "10 years in sports education.", "photo": "/images/uploads/faculty-7.jpg"},
+      {"name": "David Wilson", "role": "Chemistry Teacher", "bio": "16 years teaching chemistry.", "photo": "/images/uploads/faculty-8.jpg"},
+      {"name": "Laura Martinez", "role": "Physics Teacher", "bio": "11 years teaching physics.", "photo": "/images/uploads/faculty-9.jpg"},
+      {"name": "James Taylor", "role": "Biology Teacher", "bio": "13 years in biology education.", "photo": "/images/uploads/faculty-10.jpg"},
+      {"name": "Anna White", "role": "Computer Science Teacher", "bio": "9 years teaching CS.", "photo": "/images/uploads/faculty-11.jpg"},
+      {"name": "Tom Harris", "role": "Librarian", "bio": "15 years managing school library.", "photo": "/images/uploads/faculty-12.jpg"}
+    ],
+    "toppersTitle": "Our Toppers",
+    "toppers": [
+      {"name": "Ravi Sharma", "position": "1st - 10th Board", "percentage": "98%", "photo": "/images/uploads/topper-1.jpg"},
+      {"name": "Priya Gupta", "position": "2nd - 10th Board", "percentage": "96%", "photo": "/images/uploads/topper-2.jpg"},
+      {"name": "Amit Kumar", "position": "3rd - 10th Board", "percentage": "94%", "photo": "/images/uploads/topper-3.jpg"},
+      {"name": "Neha Singh", "position": "1st - 12th Board", "percentage": "97%", "photo": "/images/uploads/topper-4.jpg"},
+      {"name": "Karan Verma", "position": "2nd - 12th Board", "percentage": "95%", "photo": "/images/uploads/topper-5.jpg"},
+      {"name": "Suman Yadav", "position": "3rd - 12th Board", "percentage": "93%", "photo": "/images/uploads/topper-6.jpg"}
     ],
     "resultsTitle": "Academic Results",
-    "results": {
-      "total": 100,
-      "above90": 20,
-      "above80": 50,
-      "above60": 80
-    },
-    "noticeTitle": "Notices",
+    "noticeTitle": "Notice Board",
     "notices": [],
-    "addressTitle": "Contact Us",
-    "addressContent": "GSSS Budhwali, Budhwali Village, Rajasthan, India"
+    "contactTitle": "Contact Us",
+    "contactAddress": "GSSS Budhwali, Budhwali Village, Rajasthan, India"
   },
   "hi": {
-    "bioTitle": "हमारे बारे में",
-    "bioContent": "जीएसएसएस बुढ़वाली, बुढ़वाली, राजस्थान में एक प्रमुख सरकारी वरिष्ठ माध्यमिक विद्यालय है, जो छात्रों को गुणवत्तापूर्ण शिक्षा प्रदान करने के लिए समर्पित है।",
+    "bioTitle": "जीएसएसएस बुढ़वाली के बारे में",
+    "bioContent": "जीएसएसएस बुढ़वाली, बुढ़वाली, राजस्थान में एक प्रमुख सरकारी वरिष्ठ माध्यमिक विद्यालय है। हम गुणवत्तापूर्ण शिक्षा प्रदान करने और छात्रों के समग्र विकास को बढ़ावा देने के लिए प्रतिबद्ध हैं।",
     "facultyTitle": "हमारा संकाय",
     "faculty": [
-      {
-        "name": "जॉन डो",
-        "role": "प्राचार्य",
-        "bio": "शिक्षा में 20 वर्षों से अधिक के अनुभव के साथ, श्री डो जीएसएसएस बुढ़वाली का नेतृत्व उत्कृष्टता की दृष्टि से करते हैं।",
-        "photo": "/images/uploads/faculty-1.jpg"
-      },
-      {
-        "name": "जेन स्मिथ",
-        "role": "गणित शिक्षक",
-        "bio": "सुश्री स्मिथ को गणित पढ़ाने का जुनून है और वे 10 वर्षों से जीएसएसएस बुढ़वाली के साथ हैं।",
-        "photo": "/images/uploads/faculty-2.jpg"
-      }
+      {"name": "जॉन डो", "role": "प्राचार्य", "bio": "20+ वर्षों का शिक्षा अनुभव।", "photo": "/images/uploads/faculty-1.jpg"},
+      {"name": "जेन स्मिथ", "role": "गणित शिक्षक", "bio": "10 वर्षों से गणित पढ़ा रहे हैं।", "photo": "/images/uploads/faculty-2.jpg"},
+      {"name": "एलिस जॉनसन", "role": "विज्ञान शिक्षक", "bio": "15 वर्षों का विज्ञान शिक्षा अनुभव।", "photo": "/images/uploads/faculty-3.jpg"},
+      {"name": "बॉब ब्राउन", "role": "अंग्रेजी शिक्षक", "bio": "12 वर्षों से अंग्रेजी पढ़ा रहे हैं।", "photo": "/images/uploads/faculty-4.jpg"},
+      {"name": "सारा डेविस", "role": "हिंदी शिक्षक", "bio": "8 वर्षों से हिंदी पढ़ा रहे हैं।", "photo": "/images/uploads/faculty-5.jpg"},
+      {"name": "माइकल ली", "role": "सामाजिक अध्ययन शिक्षक", "bio": "14 वर्षों का शिक्षा अनुभव।", "photo": "/images/uploads/faculty-6.jpg"},
+      {"name": "एमिली क्लार्क", "role": "शारीरिक शिक्षा", "bio": "10 वर्षों का खेल शिक्षा अनुभव।", "photo": "/images/uploads/faculty-7.jpg"},
+      {"name": "डेविड विल्सन", "role": "रसायन विज्ञान शिक्षक", "bio": "16 वर्षों से रसायन विज्ञान पढ़ा रहे हैं।", "photo": "/images/uploads/faculty-8.jpg"},
+      {"name": "लॉरा मार्टिनेज", "role": "भौतिकी शिक्षक", "bio": "11 वर्षों से भौतिकी पढ़ा रहे हैं।", "photo": "/images/uploads/faculty-9.jpg"},
+      {"name": "जेम्स टेलर", "role": "जीव विज्ञान शिक्षक", "bio": "13 वर्षों का जीव विज्ञान शिक्षा अनुभव।", "photo": "/images/uploads/faculty-10.jpg"},
+      {"name": "एना व्हाइट", "role": "कंप्यूटर विज्ञान शिक्षक", "bio": "9 वर्षों से कंप्यूटर विज्ञान पढ़ा रहे हैं।", "photo": "/images/uploads/faculty-11.jpg"},
+      {"name": "टॉम हैरिस", "role": "पुस्तकालयाध्यक्ष", "bio": "15 वर्षों से स्कूल पुस्तकालय का प्रबंधन।", "photo": "/images/uploads/faculty-12.jpg"}
+    ],
+    "toppersTitle": "हमारे टॉपर्स",
+    "toppers": [
+      {"name": "रवि शर्मा", "position": "10वीं बोर्ड - प्रथम", "percentage": "98%", "photo": "/images/uploads/topper-1.jpg"},
+      {"name": "प्रिया गुप्ता", "position": "10वीं बोर्ड - द्वितीय", "percentage": "96%", "photo": "/images/uploads/topper-2.jpg"},
+      {"name": "अमित कुमार", "position": "10वीं बोर्ड - तृतीय", "percentage": "94%", "photo": "/images/uploads/topper-3.jpg"},
+      {"name": "नेहा सिंह", "position": "12वीं बोर्ड - प्रथम", "percentage": "97%", "photo": "/images/uploads/topper-4.jpg"},
+      {"name": "करण वर्मा", "position": "12वीं बोर्ड - द्वितीय", "percentage": "95%", "photo": "/images/uploads/topper-5.jpg"},
+      {"name": "सुमन यादव", "position": "12वीं बोर्ड - तृतीय", "percentage": "93%", "photo": "/images/uploads/topper-6.jpg"}
     ],
     "resultsTitle": "शैक्षणिक परिणाम",
-    "results": {
-      "total": 100,
-      "above90": 20,
-      "above80": 50,
-      "above60": 80
-    },
-    "noticeTitle": "सूचनाएं",
+    "noticeTitle": "सूचना बोर्ड",
     "notices": [],
-    "addressTitle": "संपर्क करें",
-    "addressContent": "जीएसएसएस बुढ़वाली, बुढ़वाली गांव, राजस्थान, भारत"
+    "contactTitle": "संपर्क करें",
+    "contactAddress": "जीएसएसएस बुढ़वाली, बुढ़वाली गांव, राजस्थान, भारत"
   },
   "socialLinks": {
     "facebook": "https://facebook.com/gsssbudhwali",
