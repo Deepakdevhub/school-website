@@ -15,9 +15,20 @@ collections:
           - { label: "School Name (English)", name: "en_schoolName", widget: "string", required: true }
           - { label: "School Name (Hindi)", name: "hi_schoolName", widget: "string", required: true }
           - { label: "Header Background Image", name: "headerBackground", widget: "image", required: true }
+          - { label: "Contact Number for Admission", name: "contactNumber", widget: "string", required: true }
           - { label: "Slideshow Images", name: "slideshow", widget: "list", required: true, fields: [
               { label: "Image", name: "image", widget: "image", required: true }
             ]}
+          - label: "Results"
+            name: "results"
+            widget: "object"
+            required: true
+            fields:
+              - { label: "Total Students (10th + 12th)", name: "totalStudents", widget: "number", required: true }
+              - { label: "Above 80%", name: "above80", widget: "number", required: true }
+              - { label: "Above 60%", name: "above60", widget: "number", required: true }
+              - { label: "Pass Percentage", name: "passPercentage", widget: "string", required: true }
+          - { label: "Google Map Link", name: "mapLink", widget: "string", required: true }
           - label: "English Content"
             name: "en"
             widget: "object"
@@ -32,24 +43,22 @@ collections:
                   { label: "Bio", name: "bio", widget: "text", required: true },
                   { label: "Photo", name: "photo", widget: "image", required: true }
                 ]}
+              - { label: "Toppers Title", name: "toppersTitle", widget: "string", required: true }
+              - { label: "Toppers", name: "toppers", widget: "list", required: true, fields: [
+                  { label: "Name", name: "name", widget: "string", required: true },
+                  { label: "Position", name: "position", widget: "string", required: true },
+                  { label: "Percentage", name: "percentage", widget: "string", required: true },
+                  { label: "Photo", name: "photo", widget: "image", required: true }
+                ]}
               - { label: "Results Title", name: "resultsTitle", widget: "string", required: true }
-              - label: "Results"
-                name: "results"
-                widget: "object"
-                required: true
-                fields:
-                  - { label: "Total Students", name: "total", widget: "number", required: true }
-                  - { label: "Above 90%", name: "above90", widget: "number", required: true }
-                  - { label: "Above 80%", name: "above80", widget: "number", required: true }
-                  - { label: "Above 60%", name: "above60", widget: "number", required: true }
               - { label: "Notice Title", name: "noticeTitle", widget: "string", required: true }
               - { label: "Notices", name: "notices", widget: "list", required: true, fields: [
                   { label: "Title", name: "title", widget: "string", required: true },
                   { label: "Date", name: "date", widget: "date", required: true },
                   { label: "Attachment", name: "attachment", widget: "file", required: false }
                 ]}
-              - { label: "Address Title", name: "addressTitle", widget: "string", required: true }
-              - { label: "Address Content", name: "addressContent", widget: "text", required: true }
+              - { label: "Contact Title", name: "contactTitle", widget: "string", required: true }
+              - { label: "Contact Address", name: "contactAddress", widget: "text", required: true }
           - label: "Hindi Content"
             name: "hi"
             widget: "object"
@@ -64,24 +73,22 @@ collections:
                   { label: "Bio", name: "bio", widget: "text", required: true },
                   { label: "Photo", name: "photo", widget: "image", required: true }
                 ]}
+              - { label: "Toppers Title", name: "toppersTitle", widget: "string", required: true }
+              - { label: "Toppers", name: "toppers", widget: "list", required: true, fields: [
+                  { label: "Name", name: "name", widget: "string", required: true },
+                  { label: "Position", name: "position", widget: "string", required: true },
+                  { label: "Percentage", name: "percentage", widget: "string", required: true },
+                  { label: "Photo", name: "photo", widget: "image", required: true }
+                ]}
               - { label: "Results Title", name: "resultsTitle", widget: "string", required: true }
-              - label: "Results"
-                name: "results"
-                widget: "object"
-                required: true
-                fields:
-                  - { label: "Total Students", name: "total", widget: "number", required: true }
-                  - { label: "Above 90%", name: "above90", widget: "number", required: true }
-                  - { label: "Above 80%", name: "above80", widget: "number", required: true }
-                  - { label: "Above 60%", name: "above60", widget: "number", required: true }
               - { label: "Notice Title", name: "noticeTitle", widget: "string", required: true }
               - { label: "Notices", name: "notices", widget: "list", required: true, fields: [
                   { label: "Title", name: "title", widget: "string", required: true },
                   { label: "Date", name: "date", widget: "date", required: true },
                   { label: "Attachment", name: "attachment", widget: "file", required: false }
                 ]}
-              - { label: "Address Title", name: "addressTitle", widget: "string", required: true }
-              - { label: "Address Content", name: "addressContent", widget: "text", required: true }
+              - { label: "Contact Title", name: "contactTitle", widget: "string", required: true }
+              - { label: "Contact Address", name: "contactAddress", widget: "text", required: true }
           - label: "Social Links"
             name: "socialLinks"
             widget: "object"
