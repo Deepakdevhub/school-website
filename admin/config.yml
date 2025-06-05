@@ -1,0 +1,78 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "content"
+    label: "Content"
+    files:
+      - file: "content.json"
+        label: "Main Content"
+        name: "content"
+        fields:
+          - { label: "English Content", name: "en", widget: "object", fields: [
+              { label: "School Name", name: "schoolName", widget: "string" },
+              { label: "Bio Title", name: "bioTitle", widget: "string" },
+              { label: "Bio Content", name: "bioContent", widget: "text" },
+              { label: "Faculty Title", name: "facultyTitle", widget: "string" },
+              { label: "Faculty", name: "faculty", widget: "list", fields: [
+                { label: "Name", name: "name", widget: "string" },
+                { label: "Role", name: "role", widget: "string" },
+                { label: "Bio", name: "bio", widget: "text" },
+                { label: "Photo", name: "photo", widget: "image" }
+              ]},
+              { label: "Results Title", name: "resultsTitle", widget: "string" },
+              { label: "Results", name: "results", widget: "object", fields: [
+                { label: "Total Students", name: "total", widget: "string" },
+                { label: "Above 90%", name: "above90", widget: "string" },
+                { label: "Above 80%", name: "above80", widget: "string" },
+                { label: "Above 60%", name: "above60", widget: "string" }
+              ]},
+              { label: "Notice Title", name: "noticeTitle", widget: "string" },
+              { label: "Notices", name: "notices", widget: "list", fields: [
+                { label: "Title", name: "title", widget: "string" },
+                { label: "Date", name: "date", widget: "date" },
+                { label: "Attachment", name: "attachment", widget: "file", required: false }
+              ]},
+              { label: "Address Title", name: "addressTitle", widget: "string" },
+              { label: "Address Content", name: "addressContent", widget: "string" }
+            ]}
+          - { label: "Hindi Content", name: "hi", widget: "object", fields: [
+              { label: "School Name", name: "schoolName", widget: "string" },
+              { label: "Bio Title", name: "bioTitle", widget: "string" },
+              { label: "Bio Content", name: "bioContent", widget: "text" },
+              { label: "Faculty Title", name: "facultyTitle", widget: "string" },
+              { label: "Faculty", name: "faculty", widget: "list", fields: [
+                { label: "Name", name: "name", widget: "string" },
+                { label: "Role", name: "role", widget: "string" },
+                { label: "Bio", name: "bio", widget: "text" },
+                { label: "Photo", name: "photo", widget: "image" }
+              ]},
+              { label: "Results Title", name: "resultsTitle", widget: "string" },
+              { label: "Results", name: "results", widget: "object", fields: [
+                { label: "Total Students", name: "total", widget: "string" },
+                { label: "Above 90%", name: "above90", widget: "string" },
+                { label: "Above 80%", name: "above80", widget: "string" },
+                { label: "Above 60%", name: "above60", widget: "string" }
+              ]},
+              { label: "Notice Title", name: "noticeTitle", widget: "string" },
+              { label: "Notices", name: "notices", widget: "list", fields: [
+                { label: "Title", name: "title", widget: "string" },
+                { label: "Date", name: "date", widget: "date" },
+                { label: "Attachment", name: "attachment", widget: "file", required: false }
+              ]},
+              { label: "Address Title", name: "addressTitle", widget: "string" },
+              { label: "Address Content", name: "addressContent", widget: "string" }
+            ]}
+          - { label: "Slideshow Images", name: "slideshow", widget: "list", fields: [
+              { label: "Image", name: "image", widget: "image" }
+            ]}
+          - { label: "Social Links", name: "socialLinks", widget: "object", fields: [
+              { label: "Facebook", name: "facebook", widget: "string" },
+              { label: "Twitter", name: "twitter", widget: "string" },
+              { label: "Instagram", name: "instagram", widget: "string" },
+              { label: "YouTube", name: "youtube", widget: "string" }
+            ]}
