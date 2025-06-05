@@ -1,143 +1,158 @@
-let currentLang = 'en';
-let currentSlide = 0;
+/**
+ * script.js
+ * Handles dynamic content loading, language switching, slideshow, and header background for GSS Budhwali website.
+ */
 
-function loadContent() {
-  fetch('/content.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok ' + response.statusText);
+// Default language (load from localStorage if available)
+let currentLang = localStorage.getItem('language') || 'en';
+
+// Add a loading spinner
+document.body.innerHTML += '<div id="loading" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 18px;">Loading...</div>';
+
+// Fetch content from content.json
+fetch('content.json')
+  .then(response => response.json())
+  .then(data => {
+    // Store the content globally
+    window.contentData = data;
+
+    // Initial render
+    renderContent(currentLang);
+
+    // Set up header background
+    const header = document.querySelector('header');
+    if (data.headerBackground) {
+      header.style.backgroundImage = `url('${data.headerBackground}')`;
+    } else {
+      console.warn('Header background image not set in content.json');
+      header.style.backgroundImage = "url('/images/uploads/placeholder.jpg')"; // Fallback image
+    }
+
+    // Slideshow (not language-dependent)
+    if (data.slideshow && data.slideshow.length > 0) {
+      const slideshow = document.getElementById('slideshow');
+      let currentSlide = 0;
+      function showSlide(index) {
+        slideshow.innerHTML = `<img src="${data.slideshow[index].image}" alt="Slide ${index + 1}">`;
       }
-      return response.json();
-    })
-    .then(data => {
-      document.getElementById('schoolName').textContent = data[currentLang].schoolName;
-      document.getElementById('bioTitle').textContent = data[currentLang].bioTitle;
-      document.getElementById('bioContent').textContent = data[currentLang].bioContent || 'School bio not available.';
-      document.getElementById('facultyTitle').textContent = data[currentLang].facultyTitle;
-      document.getElementById('resultsTitle').textContent = data[currentLang].resultsTitle;
-      document.getElementById('noticeTitle').textContent = data[currentLang].noticeTitle;
-      document.getElementById('addressTitle').textContent = data[currentLang].addressTitle;
-      document.getElementById('addressContent').textContent = data[currentLang].addressContent;
+      showSlide(currentSlide);
+      setInterval(() => {
+        currentSlide = (currentSlide + 1) % data.slideshow.length;
+        showSlide(currentSlide);
+      }, 5000); // Change slide every 5 seconds
+    } else {
+      console.warn('No slideshow images found in content.json');
+      document.getElementById('slideshow').innerHTML = '<p>No slideshow images available.</p>';
+    }
 
-      const slideshowContainer = document.querySelector('.slideshow-container');
-      slideshowContainer.innerHTML = '';
-     if (data.slideshow && data.slideshow.length > 0) {
-  const slideshow = document.getElementById('slideshow');
-  let currentSlide = 0;
-  function showSlide(index) {
-    slideshow.innerHTML = `<img src="${data.slideshow[index].image}" alt="Slide ${index + 1}">`; // Changed to data.slideshow[index].image
+    // Remove loading spinner
+    document.getElementById('loading').remove();
+  })
+  .catch(error => {
+    console.error('Error loading content:', error);
+    document.getElementById('loading').textContent = 'Error loading content. Please try again later.';
+  });
+
+// Function to render content based on language with error handling
+function renderContent(lang) {
+  const data = window.contentData;
+
+  // Fallback if language data is missing
+  if (!data || !data[lang]) {
+    console.error(`Content for language "${lang}" is missing in content.json`);
+    // Fallback to the other language
+    const fallbackLang = lang === 'en' ? 'hi' : 'en';
+    if (data[fallbackLang]) {
+      console.warn(`Falling back to language "${fallbackLang}"`);
+      lang = fallbackLang;
+      currentLang = fallbackLang;
+      localStorage.setItem('language', currentLang); // Update saved language
+    } else {
+      // If both languages are missing, display a placeholder
+      console.error('No content available for either language');
+      document.querySelectorAll('.content-section').forEach(section => {
+        section.innerHTML = '<p>Error: Content not available. Please contact the administrator.</p>';
+      });
+      return;
+    }
   }
-  showSlide(currentSlide);
-  setInterval(() => {
-    currentSlide = (currentSlide + 1) % data.slideshow.length;
-    showSlide(currentSlide);
-  }, 5000);
-}
-      else {
-        slideshowContainer.innerHTML = '<p class="text-center text-gray-600">No slideshow images available.</p>';
-      }
 
-      const facultyList = document.getElementById('facultyList');
-      facultyList.innerHTML = '';
-      if (data[currentLang].faculty && data[currentLang].faculty.length > 0) {
-        data[currentLang].faculty.forEach(member => {
-          const div = document.createElement('div');
-          div.className = 'text-center';
-          div.innerHTML = `
-            <img src="${member.photo}" alt="${member.name}" class="w-32 h-32 rounded-full mx-auto mb-2 object-cover" onerror="this.src='https://via.placeholder.com/128'">
-            <h3 class="text-lg font-semibold">${member.name}</h3>
-            <p class="text-gray-600">${member.role}</p>
-            <p class="text-sm text-gray-500">${member.bio}</p>
-          `;
-          facultyList.appendChild(div);
-        });
-      } else {
-        facultyList.innerHTML = '<p class="text-center text-red-600">Unable to load faculty list.</p>';
-      }
+  // Update school name
+  const schoolName = document.getElementById('school-name');
+  schoolName.textContent = lang === 'en' ? data.en_schoolName : data.hi_schoolName;
 
-      const resultsContent = document.getElementById('resultsContent');
-      if (data[currentLang].results) {
-        resultsContent.innerHTML = `
-          <table class="w-full border-collapse border border-gray-300">
-            <thead>
-              <tr class="bg-gray-200">
-                <th class="border border-gray-300 p-2">Total Students</th>
-                <th class="border border-gray-300 p-2">Above 90%</th>
-                <th class="border border-gray-300 p-2">Above 80%</th>
-                <th class="border border-gray-300 p-2">Above 60%</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="border border-gray-300 p-2 text-center">${data[currentLang].results.total}</td>
-                <td class="border border-gray-300 p-2 text-center">${data[currentLang].results.above90}</td>
-                <td class="border border-gray-300 p-2 text-center">${data[currentLang].results.above80}</td>
-                <td class="border border-gray-300 p-2 text-center">${data[currentLang].results.above60}</td>
-              </tr>
-            </tbody>
-          </table>
-        `;
-      } else {
-        resultsContent.innerHTML = '<p class="text-center text-red-600">Unable to load results.</p>';
-      }
+  // Update bio
+  const bioTitle = document.getElementById('bio-title');
+  const bioContent = document.getElementById('bio-content');
+  bioTitle.textContent = data[lang].bioTitle || 'Bio Title Missing';
+  bioContent.textContent = data[lang].bioContent || 'Bio Content Missing';
 
-      const noticeBoard = document.getElementById('noticeBoard');
-      noticeBoard.innerHTML = '';
-      if (data[currentLang].notices && data[currentLang].notices.length > 0) {
-        data[currentLang].notices.forEach(notice => {
-          const div = document.createElement('div');
-          div.className = 'notice-card';
-          div.innerHTML = `
-            <h3 class="text-lg font-semibold">${notice.title}</h3>
-            <p class="text-gray-600">${notice.date}</p>
-            ${notice.attachment ? `<a href="${notice.attachment}" class="text-blue-600 hover:underline" target="_blank">Download Attachment</a>` : ''}
-          `;
-          noticeBoard.appendChild(div);
-        });
-      } else {
-        noticeBoard.innerHTML = '<p class="text-center text-red-600">No notices available.</p>';
-      }
-
-      document.getElementById('facebookLink').href = data.socialLinks.facebook;
-      document.getElementById('twitterLink').href = data.socialLinks.twitter;
-      document.getElementById('instagramLink').href = data.socialLinks.instagram;
-      document.getElementById('youtubeLink').href = data.socialLinks.youtube;
-    })
-    .catch(error => {
-      console.error('Error loading content:', error);
-      document.getElementById('bioContent').textContent = 'Unable to load school bio. Please try again later.';
-      document.getElementById('facultyList').innerHTML = '<p class="text-center text-red-600">Unable to load faculty list. Please try again later.</p>';
+  // Update faculty
+  const facultyTitle = document.getElementById('faculty-title');
+  const facultyGrid = document.getElementById('faculty-grid');
+  facultyTitle.textContent = data[lang].facultyTitle || 'Faculty Title Missing';
+  facultyGrid.innerHTML = '';
+  if (data[lang].faculty && Array.isArray(data[lang].faculty)) {
+    data[lang].faculty.forEach(member => {
+      const div = document.createElement('div');
+      div.innerHTML = `
+        <img src="${member.photo || '/images/uploads/placeholder.jpg'}" alt="${member.name || 'Unknown'}">
+        <h3>${member.name || 'Name Missing'}</h3>
+        <p>${member.role || 'Role Missing'}</p>
+        <p>${member.bio || 'Bio Missing'}</p>
+      `;
+      facultyGrid.appendChild(div);
     });
-}
+  } else {
+    facultyGrid.innerHTML = '<p>No faculty data available.</p>';
+  }
 
-function changeLanguage(lang) {
-  currentLang = lang;
-  loadContent();
-}
+  // Update results
+  const resultsTitle = document.getElementById('results-title');
+  resultsTitle.textContent = data[lang].resultsTitle || 'Results Title Missing';
+  document.getElementById('total-students').textContent = data[lang].results?.total || 'N/A';
+  document.getElementById('above-90').textContent = data[lang].results?.above90 || 'N/A';
+  document.getElementById('above-80').textContent = data[lang].results?.above80 || 'N/A';
+  document.getElementById('above-60').textContent = data[lang].results?.above60 || 'N/A';
 
-function showSlide(index) {
-  const slides = document.querySelector('.slideshow-container');
-  const totalSlides = slides.children.length;
-  if (totalSlides === 0) return;
-  if (index >= totalSlides) currentSlide = 0;
-  else if (index < 0) currentSlide = totalSlides - 1;
-  else currentSlide = index;
-  slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-}
-
-setInterval(() => showSlide(currentSlide + 1), 5000);
-
-document.addEventListener('DOMContentLoaded', () => {
-  loadContent();
-
-  const sections = document.querySelectorAll('.fade-in');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+  // Update notices
+  const noticeTitle = document.getElementById('notice-title');
+  const noticeList = document.getElementById('notice-list');
+  noticeTitle.textContent = data[lang].noticeTitle || 'Notices Title Missing';
+  noticeList.innerHTML = '';
+  if (data[lang].notices && Array.isArray(data[lang].notices)) {
+    data[lang].notices.forEach(notice => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        ${notice.title || 'Title Missing'} - ${notice.date || 'Date Missing'}
+        ${notice.attachment ? `<a href="${notice.attachment}" target="_blank">Download</a>` : ''}
+      `;
+      noticeList.appendChild(li);
     });
-  }, { threshold: 0.1 });
+  } else {
+    noticeList.innerHTML = '<p>No notices available.</p>';
+  }
 
-  sections.forEach(section => observer.observe(section));
+  // Update address
+  const addressTitle = document.getElementById('address-title');
+  const addressContent = document.getElementById('address-content');
+  addressTitle.textContent = data[lang].addressTitle || 'Address Title Missing';
+  addressContent.textContent = data[lang].addressContent || 'Address Content Missing';
+
+  // Update social links (not language-dependent)
+  const socialLinks = document.getElementById('social-links');
+  socialLinks.innerHTML = `
+    <a href="${data.socialLinks.facebook}" target="_blank">Facebook</a>
+    <a href="${data.socialLinks.twitter}" target="_blank">Twitter</a>
+    <a href="${data.socialLinks.instagram}" target="_blank">Instagram</a>
+    <a href="${data.socialLinks.youtube}" target="_blank">YouTube</a>
+  `;
+}
+
+// Language toggle event listener
+document.getElementById('language-toggle').addEventListener('click', () => {
+  currentLang = currentLang === 'en' ? 'hi' : 'en';
+  localStorage.setItem('language', currentLang); // Save language choice
+  renderContent(currentLang);
+  document.getElementById('language-toggle').textContent = currentLang === 'en' ? 'हिन्दी' : 'English';
 });
