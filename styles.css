@@ -23,7 +23,7 @@ body {
 header {
   background-size: cover;
   background-position: center;
-  height: 500px;
+  height: 300px; /* Reduced from 400px to 300px */
   color: white;
   position: relative;
   display: flex;
@@ -32,25 +32,27 @@ header {
 }
 
 .header-content {
-  text-align: center;
-  position: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 1200px;
   padding: 0 20px;
+  position: relative;
 }
 
 #school-name {
   font-size: 48px;
-  text-shadow: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
-  text-align: left;
-  flex-grow: 1;
+  text-align: center;
 }
 
 #admission-open {
   position: absolute;
   top: 20px;
-  right:  padding: 10px 20px;
+  right: 20px; /* Added missing value for right positioning */
+  padding: 10px 20px;
   background-color: #FFCA28;
   color: white;
   border: none;
@@ -84,7 +86,7 @@ header {
   padding: 5px 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   z-index: 10;
 }
 
@@ -352,7 +354,7 @@ footer p {
   }
 
   header {
-    height: 400px;
+    height: 250px; /* Reduced from 350px to 250px */
   }
 
   .slideshow-container {
@@ -416,7 +418,7 @@ footer p {
   }
 
   header {
-    height: 300px;
+    height: 200px; /* Reduced from 250px to 200px */
   }
 
   .slideshow-container {
