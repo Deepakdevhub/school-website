@@ -19,53 +19,45 @@ body {
   font-family: 'Noto Sans Devanagari', sans-serif;
 }
 
-/* Header styles */
-header {
-  /* Removed background-size and background-position since no background image */
-  /* background-size: cover; */
-  /* background-position: center; */
-  background: linear-gradient(135deg, #1E88E5, #1565C0); /* Added professional gradient background */
-  height: 190px;
-  color: white;
-  position: relative;
+/* Top Strip styles */
+.top-strip {
+  background-color: #F5F5F5; /* Light gray background for the strip */
   display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
   align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
-  margin-bottom: 40px; /* Added space between header and slideshow */
+  padding: 5px 20px;
+  height: 50px; /* Button-sized height */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-.header-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  padding: 20px; /* Increased padding for better spacing */
-  position: relative;
+#language-toggle {
+  padding: 8px 15px;
+  background-color: #fff;
+  color: #F06292; /* Updated to light pink */
+  border: 2px solid #F06292;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  margin-right: 10px; /* Space between buttons */
 }
 
-#school-name {
-  font-size: 45px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adjusted shadow for better contrast */
-  margin-bottom: 20px;
-  text-align: center;
-  font-weight: 700; /* Made the font bolder for professionalism */
+#language-toggle:hover {
+  background-color: #F06292;
+  color: #fff;
 }
 
 #admission-open {
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  padding: 10px 20px;
+  padding: 8px 15px;
   background-color: #FFCA28;
-  color: #333; /* Changed text color for better contrast */
-  border: 2px solid #FFB300; /* Added border for emphasis */
+  color: #333;
+  border: 2px solid #FFB300;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
-  transition: background-color 0.3s, transform 0.1s; /* Added transition for hover effect */
+  transition: background-color 0.3s, transform 0.1s;
 }
 
 .blinking {
@@ -80,7 +72,7 @@ header {
 
 #admission-open:hover {
   background-color: #FFB300;
-  transform: scale(1.05); /* Slight scale effect on hover */
+  transform: scale(1.05);
 }
 
 .contact-number {
@@ -101,24 +93,53 @@ header {
   display: block;
 }
 
-#language-toggle {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  padding: 10px 20px;
-  background-color: #fff; /* Changed to white for contrast */
-  color: #1E88E5; /* Text color matches the header gradient */
-  border: 2px solid #1E88E5; /* Added border for emphasis */
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s, color 0.3s;
+/* Header styles */
+header {
+  background: linear-gradient(135deg, #FCE4EC, #F8BBD0); /* Light pink gradient */
+  height: 120px; /* Reduced height since buttons are in the top strip */
+  color: #333; /* Changed text color for better contrast on light pink */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
 }
 
-#language-toggle:hover {
-  background-color: #1E88E5;
-  color: #fff;
+.header-content {
+  display: flex;
+  justify-content: space-between; /* Space between Ashok Stambh and school name */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.ashok-stambh {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ashok-stambh-image {
+  width: 60px;
+  height: 60px;
+  background-color: #ddd; /* Placeholder for the Ashok Stambh image */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+}
+
+#school-name {
+  font-size: 36px; /* Reduced font size to fit the smaller header */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  text-align: right; /* Align to the right */
+  font-weight: 700;
 }
 
 /* Slideshow styles */
@@ -127,9 +148,9 @@ header {
   width: 100%;
   height: 400px;
   overflow: hidden;
-  border: 8px solid #1E88E5; /* Added thick border */
-  border-radius: 10px; /* Rounded corners for the border */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added subtle shadow for depth */
+  border: 8px solid #F06292; /* Updated to light pink */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #slideshow img {
@@ -180,7 +201,7 @@ header {
 
 h2 {
   font-size: 32px;
-  color: #1E88E5;
+  color: #F06292; /* Updated to light pink */
   margin-bottom: 30px;
   text-align: center;
 }
@@ -220,7 +241,7 @@ h2 {
 
 #faculty-grid h3 {
   font-size: 18px;
-  color: #1E88E5;
+  color: #F06292; /* Updated to light pink */
   margin: 10px 0 5px;
 }
 
@@ -254,7 +275,7 @@ h2 {
 
 #toppers-grid h3 {
   font-size: 18px;
-  color: #1E88E5;
+  color: #F06292; /* Updated to light pink */
   margin: 10px 0 5px;
 }
 
@@ -278,7 +299,7 @@ h2 {
 }
 
 #results-table th {
-  background-color: #1E88E5;
+  background-color: #F06292; /* Updated to light pink */
   color: white;
   font-size: 16px;
 }
@@ -303,7 +324,7 @@ h2 {
 }
 
 #notice-list a {
-  color: #1E88E5;
+  color: #F06292; /* Updated to light pink */
   text-decoration: none;
   margin-left: 10px;
 }
@@ -326,19 +347,19 @@ h2 {
 #map-link {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #1E88E5;
+  background-color: #F06292; /* Updated to light pink */
   color: white;
   text-decoration: none;
   border-radius: 5px;
 }
 
 #map-link:hover {
-  background-color: #1565C0;
+  background-color: #EC407A; /* Updated to darker light pink */
 }
 
 /* Footer styles */
 footer {
-  background-color: #1E88E5;
+  background-color: #F06292; /* Updated to light pink */
   color: white;
   text-align: center;
   padding: 20px;
@@ -367,7 +388,7 @@ footer p {
   }
 
   header {
-    height: 250px;
+    height: 100px;
   }
 
   .slideshow-container {
@@ -376,23 +397,35 @@ footer p {
 }
 
 @media (max-width: 768px) {
-  #school-name {
-    font-size: 36px;
+  .top-strip {
+    justify-content: center;
   }
 
-  #admission-open,
-  #language-toggle {
-    padding: 8px 15px;
-    font-size: 14px;
+  #language-toggle,
+  #admission-open {
+    padding: 6px 12px;
+    font-size: 12px;
   }
 
   .header-content {
     flex-direction: column;
+    text-align: center;
   }
 
-  .contact-number {
-    position: static;
+  #school-name {
+    font-size: 28px;
+    text-align: center;
     margin-top: 10px;
+  }
+
+  .ashok-stambh-placeholder {
+    width: 50px;
+    height: 50px;
+    font-size: 10px;
+  }
+
+  .satyamev-jayate {
+    font-size: 12px;
   }
 
   #faculty-grid,
@@ -422,7 +455,7 @@ footer p {
 
 @media (max-width: 480px) {
   #school-name {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   #faculty-grid,
@@ -431,7 +464,7 @@ footer p {
   }
 
   header {
-    height: 200px;
+    height: 80px;
   }
 
   .slideshow-container {
