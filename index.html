@@ -22,37 +22,52 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- New Top Strip for Language Toggle and Admission Button -->
+  <div class="top-strip">
+    <button id="language-toggle">हिन्दी</button>
+    <button id="admission-open" class="blinking">Admission Open</button>
+    <div id="contact-number" class="contact-number hidden"></div>
+  </div>
+
+  <!-- Updated Header with Ashok Stambh and School Name -->
   <header id="header">
     <div class="header-content">
+      <div class="ashok-stambh">
+        <!-- Placeholder for Ashok Stambh image -->
+        <div class="ashok-stambh-placeholder">Ashok Stambh</div>
+        <p class="satyamev-jayate">Satyamev Jayate</p>
+      </div>
       <h1 id="school-name"></h1>
-      <button id="admission-open" class="blinking">Admission Open</button>
-      <div id="contact-number" class="contact-number hidden"></div>
-      <button id="language-toggle">हिन्दी</button>
     </div>
   </header>
+
   <div class="slideshow-container">
     <div id="slideshow"></div>
     <button id="prev-slide" class="slide-nav prev"><</button>
     <button id="next-slide" class="slide-nav next">></button>
   </div>
+
   <section id="bio" class="content-section">
     <h2 id="bio-title"></h2>
     <p id="bio-content"></p>
   </section>
+
   <section id="faculty" class="content-section">
     <h2 id="faculty-title"></h2>
     <div id="faculty-grid"></div>
   </section>
+
   <section id="toppers" class="content-section">
     <h2 id="toppers-title"></h2>
     <div id="toppers-grid"></div>
   </section>
+
   <section id="results" class="content-section">
     <h2 id="results-title"></h2>
     <table id="results-table">
       <thead>
         <tr>
-          <th>Total Students(10th&12th)</th>
+          <th>Total Students(10th%12th)</th>
           <th>Above 80%</th>
           <th>Above 60%</th>
           <th>Pass Percentage</th>
@@ -68,19 +83,23 @@
       </tbody>
     </table>
   </section>
+
   <section id="notices" class="content-section">
     <h2 id="notice-title"></h2>
     <ul id="notice-list"></ul>
   </section>
+
   <section id="contact" class="content-section">
     <h2 id="contact-title"></h2>
     <p id="contact-address"></p>
     <a id="map-link" href="" target="_blank">View on Google Maps</a>
   </section>
+
   <footer>
     <div id="social-links"></div>
-    <p>&copy; 2025 GSSS Budhwali. All rights reserved.</p>
+    <p>© 2025 GSSS Budhwali. All rights reserved.</p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
