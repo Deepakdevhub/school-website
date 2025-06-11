@@ -243,7 +243,12 @@
     "facultyTitle": "Our Faculty",
     "contactAddress": "GSSS Budhwali, Ratangarh, Churu, Rajasthan",
     "contactTitle": "Contact Us",
-    "notices": []
+    "notices": [
+      {
+        "date": "2025-06-11T17:27:38.106Z",
+        "title": "New Website deployed "
+      }
+    ]
   },
   "contactNumber": "+91 12345 67890",
   "socialLinks": {
