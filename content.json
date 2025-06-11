@@ -133,10 +133,10 @@
         "photo": "/images/uploads/faculty-1.jpg"
       },
       {
-        "name": "Jane Smith",
-        "role": "Math Teacher",
-        "bio": "10 years teaching math.",
-        "photo": "/images/uploads/faculty-2.jpg"
+        "name": "Rajendra Prasad",
+        "role": "Lecture-Political Science ",
+        "bio": "8 years Experience of teaching Polity",
+        "photo": "/images/uploads/rajendra-.webp"
       },
       {
         "name": "Alice Johnson",
@@ -145,10 +145,10 @@
         "photo": "/images/uploads/faculty-3.jpg"
       },
       {
-        "name": "Bob Brown",
-        "role": "English Teacher",
-        "bio": "12 years teaching English.",
-        "photo": "/images/uploads/faculty-4.jpg"
+        "name": "Jane Smith",
+        "role": "Math Teacher",
+        "bio": "10 years teaching math.",
+        "photo": "/images/uploads/faculty-2.jpg"
       },
       {
         "name": "Sarah Davis",
@@ -167,6 +167,12 @@
         "role": "Physical Education",
         "bio": "10 years in sports education.",
         "photo": "/images/uploads/faculty-7.jpg"
+      },
+      {
+        "name": "Bob Brown",
+        "role": "English Teacher",
+        "bio": "12 years teaching English.",
+        "photo": "/images/uploads/faculty-4.jpg"
       },
       {
         "name": "David Wilson",
@@ -191,12 +197,6 @@
         "role": "Computer Science Teacher",
         "bio": "9 years teaching CS.",
         "photo": "/images/uploads/faculty-11.jpg"
-      },
-      {
-        "name": "Tom Harris",
-        "role": "Librarian",
-        "bio": "15 years managing school library.",
-        "photo": "/images/uploads/faculty-12.jpg"
       }
     ],
     "toppers": [
