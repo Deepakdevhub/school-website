@@ -157,46 +157,46 @@
         "photo": "/images/uploads/sushil.webp"
       },
       {
-        "name": "Michael Lee",
+        "name": "Sube Singh",
+        "role": "Senior Teacher English ",
+        "bio": "27 years in education.",
+        "photo": "/images/uploads/sube.webp"
+      },
+      {
+        "name": "Meharwana Kumari",
+        "role": "Senior Teacher Sanskrit ",
+        "bio": "10 years in education.",
+        "photo": "/images/uploads/meharwana.webp"
+      },
+      {
+        "name": "Bilal Ahamad",
+        "role": "Senior Urdu Teacher",
+        "bio": "12 years teaching Urdu.",
+        "photo": "/images/uploads/bilal.webp"
+      },
+      {
+        "name": "Jitendra Dhabai",
         "role": "Social Studies Teacher",
-        "bio": "14 years in education.",
-        "photo": "/images/uploads/faculty-6.jpg"
+        "bio": "11 years teaching.",
+        "photo": "/images/uploads/jitendra.webp"
       },
       {
-        "name": "Emily Clark",
-        "role": "Physical Education",
-        "bio": "10 years in sports education.",
-        "photo": "/images/uploads/faculty-7.jpg"
-      },
-      {
-        "name": "Bob Brown",
+        "name": "Sonu Soni",
         "role": "English Teacher",
-        "bio": "12 years teaching English.",
-        "photo": "/images/uploads/faculty-4.jpg"
+        "bio": "2 years teaching English.",
+        "photo": "/images/uploads/sonu.webp"
       },
       {
-        "name": "David Wilson",
-        "role": "Chemistry Teacher",
-        "bio": "16 years teaching chemistry.",
-        "photo": "/images/uploads/faculty-8.jpg"
+        "name": "Matu Ram",
+        "role": "Teacher ",
+        "bio": "27 years in education.",
+        "photo": "/images/uploads/matu.webp"
       },
       {
-        "name": "Laura Martinez",
-        "role": "Physics Teacher",
-        "bio": "11 years teaching physics.",
-        "photo": "/images/uploads/faculty-9.jpg"
-      },
-      {
-        "name": "James Taylor",
-        "role": "Biology Teacher",
-        "bio": "13 years in biology education.",
-        "photo": "/images/uploads/faculty-10.jpg"
-      },
-      {
-        "name": "Anna White",
-        "role": "Computer Science Teacher",
-        "bio": "9 years teaching CS.",
-        "photo": "/images/uploads/faculty-11.jpg"
+        "name": "Loona Ram Puniya",
+        "role": "Teacher",
+        "bio": "28years teaching.",
+        "photo": "/images/uploads/df2b37fd-a5bf-4df5-9380-62ed5ccb92b3.webp"
       }
     ],
     "toppers": [
