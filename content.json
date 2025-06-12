@@ -145,10 +145,10 @@
         "photo": "/images/uploads/prakash-.webp"
       },
       {
-        "name": "Jane Smith",
-        "role": "Math Teacher",
-        "bio": "10 years teaching math.",
-        "photo": "/images/uploads/faculty-2.jpg"
+        "name": "Dharamveer Bijarniya",
+        "role": "Senior Math Teacher",
+        "bio": "6 years experience of teaching math.",
+        "photo": "/images/uploads/img_8934.webp"
       },
       {
         "name": "Sushil Kumar",
@@ -259,13 +259,13 @@
   },
   "slideshow": [
     {
-      "image": "/images/uploads/f901e926-77a3-4c1f-b3ee-773b12b7a8d0.webp"
+      "image": "/images/uploads/img_8503.webp"
     },
     {
       "image": "/images/uploads/img_8453.webp"
     },
     {
-      "image": "/images/uploads/img_8503.webp"
+      "image": "/images/uploads/f901e926-77a3-4c1f-b3ee-773b12b7a8d0.webp"
     },
     {
       "image": "/images/uploads/img_8502.webp"
