@@ -197,6 +197,18 @@
         "role": "Teacher",
         "bio": "28years teaching.",
         "photo": "/images/uploads/df2b37fd-a5bf-4df5-9380-62ed5ccb92b3.webp"
+      },
+      {
+        "name": "Suresh Kumar Bissu",
+        "role": "Computer Teacher ",
+        "bio": "2 years experience of teaching ",
+        "photo": "/images/uploads/suresh.webp"
+      },
+      {
+        "name": "Surendra Kumar Dukiya",
+        "role": "LDC",
+        "bio": "B Tech ",
+        "photo": "/images/uploads/img_1759.webp"
       }
     ],
     "toppers": [
