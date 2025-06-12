@@ -213,22 +213,22 @@
         "photo": "/images/uploads/tamanna.webp"
       },
       {
-        "name": "Amit Kumar",
-        "position": "3rd - 10th Board",
-        "percentage": "94%",
-        "photo": "/images/uploads/topper-3.jpg"
-      },
-      {
-        "name": "Neha Singh",
-        "position": "1st - 12th Board",
-        "percentage": "97%",
-        "photo": "/images/uploads/topper-4.jpg"
+        "name": "Anushka Sharma",
+        "position": "2nd - 12th Board",
+        "percentage": "84%",
+        "photo": "/images/uploads/anushka.webp"
       },
       {
         "name": "Karan Verma",
         "position": "2nd - 12th Board",
         "percentage": "95%",
         "photo": "/images/uploads/topper-5.jpg"
+      },
+      {
+        "name": "Neha Singh",
+        "position": "1st - 12th Board",
+        "percentage": "97%",
+        "photo": "/images/uploads/topper-4.jpg"
       },
       {
         "name": "Suman Yadav",
