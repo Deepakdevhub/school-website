@@ -142,39 +142,37 @@ header {
   font-weight: 700;
 }
 
-/* Slideshow styles */
-/* Slideshow container */
+/* Slideshow styles - Responsive, No Cropping, Desktop-Friendly */
 .slideshow-container {
   position: relative;
   width: 100%;
-  max-width: 100%;
-  aspect-ratio: 16 / 9; /* Makes it responsive and proportional */
+  max-width: 900px;  /* Limit max width on desktop */
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;  /* Maintain consistent ratio */
   overflow: hidden;
   border: 8px solid #F06292;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
-/* Slideshow images */
+#slideshow {
+  width: 100%;
+  height: 100%;
+}
+
 #slideshow img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Crop to fill box while preserving image proportion */
+  object-fit: contain;  /* Prevent cropping */
   display: none;
-  transition: opacity 0.8s ease-in-out;
-  position: absolute;
-  top: 0;
-  left: 0;
+  background-color: #fff;
 }
 
-/* Show only active slide */
 #slideshow img.active {
   display: block;
-  opacity: 1;
-  z-index: 1;
 }
 
-/* Slide navigation buttons */
 .slide-nav {
   position: absolute;
   top: 50%;
@@ -201,11 +199,28 @@ header {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Responsive adjustment for mobile */
-@media (max-width: 600px) {
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .slideshow-container {
+    aspect-ratio: 4 / 3;
+    border-width: 6px;
+  }
+
   .slide-nav {
-    font-size: 16px;
     padding: 8px 12px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slideshow-container {
+    aspect-ratio: 1 / 1;
+    border-width: 4px;
+  }
+
+  .slide-nav {
+    padding: 6px 10px;
+    font-size: 14px;
   }
 }
 
