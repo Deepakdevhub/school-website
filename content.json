@@ -201,12 +201,6 @@
     ],
     "toppers": [
       {
-        "name": "Dali",
-        "position": "1st - 10th Board",
-        "percentage": "79",
-        "photo": "/images/uploads/dali.webp"
-      },
-      {
         "name": "Tamnna Bano",
         "position": "1st - 12th Board",
         "percentage": "87",
@@ -217,6 +211,12 @@
         "position": "2nd - 12th Board",
         "percentage": "84%",
         "photo": "/images/uploads/anushka.webp"
+      },
+      {
+        "name": "Dali",
+        "position": "1st - 10th Board",
+        "percentage": "79",
+        "photo": "/images/uploads/dali.webp"
       },
       {
         "name": "Karan Verma",
