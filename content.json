@@ -139,28 +139,22 @@
         "photo": "/images/uploads/rajendra-.webp"
       },
       {
+        "name": "Sube Singh",
+        "role": "Senior Teacher English ",
+        "bio": "27 years in education.",
+        "photo": "/images/uploads/sube.webp"
+      },
+      {
         "name": "Prakash Kumar",
         "role": "Science Teacher",
         "bio": "10 years in science education.",
         "photo": "/images/uploads/prakash-.webp"
       },
       {
-        "name": "Dharamveer Bijarniya",
-        "role": "Senior Math Teacher",
-        "bio": "6 years experience of teaching math.",
-        "photo": "/images/uploads/img_8934.webp"
-      },
-      {
         "name": "Sushil Kumar",
         "role": "Hindi Teacher",
         "bio": "8 years experience of teaching Hindi.",
         "photo": "/images/uploads/sushil.webp"
-      },
-      {
-        "name": "Sube Singh",
-        "role": "Senior Teacher English ",
-        "bio": "27 years in education.",
-        "photo": "/images/uploads/sube.webp"
       },
       {
         "name": "Meharwana Kumari",
@@ -173,6 +167,12 @@
         "role": "Senior Urdu Teacher",
         "bio": "12 years teaching Urdu.",
         "photo": "/images/uploads/bilal.webp"
+      },
+      {
+        "name": "Dharamveer Bijarniya",
+        "role": "Senior Math Teacher",
+        "bio": "6 years experience of teaching math.",
+        "photo": "/images/uploads/img_8934.webp"
       },
       {
         "name": "Jitendra Dhabai",
