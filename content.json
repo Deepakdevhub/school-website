@@ -2,118 +2,8 @@
   "hi": {
     "noticeTitle": "सूचना बोर्ड",
     "resultsTitle": "शैक्षणिक परिणाम",
-    "faculty": [
-      {
-        "name": "जॉन डो",
-        "role": "प्राचार्य",
-        "bio": "20+ वर्षों का शिक्षा अनुभव।",
-        "photo": "/images/uploads/faculty-1.jpg"
-      },
-      {
-        "name": "जेन स्मिथ",
-        "role": "गणित शिक्षक",
-        "bio": "10 वर्षों से गणित पढ़ा रहे हैं।",
-        "photo": "/images/uploads/faculty-2.jpg"
-      },
-      {
-        "name": "एलिस जॉनसन",
-        "role": "विज्ञान शिक्षक",
-        "bio": "15 वर्षों का विज्ञान शिक्षा अनुभव।",
-        "photo": "/images/uploads/faculty-3.jpg"
-      },
-      {
-        "name": "बॉब ब्राउन",
-        "role": "अंग्रेजी शिक्षक",
-        "bio": "12 वर्षों से अंग्रेजी पढ़ा रहे हैं।",
-        "photo": "/images/uploads/faculty-4.jpg"
-      },
-      {
-        "name": "सारा डेविस",
-        "role": "हिंदी शिक्षक",
-        "bio": "8 वर्षों से हिंदी पढ़ा रहे हैं।",
-        "photo": "/images/uploads/faculty-5.jpg"
-      },
-      {
-        "name": "माइकल ली",
-        "role": "सामाजिक अध्ययन शिक्षक",
-        "bio": "14 वर्षों का शिक्षा अनुभव।",
-        "photo": "/images/uploads/faculty-6.jpg"
-      },
-      {
-        "name": "एमिली क्लार्क",
-        "role": "शारीरिक शिक्षा",
-        "bio": "10 वर्षों का खेल शिक्षा अनुभव।",
-        "photo": "/images/uploads/faculty-7.jpg"
-      },
-      {
-        "name": "डेविड विल्सन",
-        "role": "रसायन विज्ञान शिक्षक",
-        "bio": "16 वर्षों से रसायन विज्ञान पढ़ा रहे हैं।",
-        "photo": "/images/uploads/faculty-8.jpg"
-      },
-      {
-        "name": "लॉरा मार्टिनेज",
-        "role": "भौतिकी शिक्षक",
-        "bio": "11 वर्षों से भौतिकी पढ़ा रहे हैं।",
-        "photo": "/images/uploads/faculty-9.jpg"
-      },
-      {
-        "name": "जेम्स टेलर",
-        "role": "जीव विज्ञान शिक्षक",
-        "bio": "13 वर्षों का जीव विज्ञान शिक्षा अनुभव।",
-        "photo": "/images/uploads/faculty-10.jpg"
-      },
-      {
-        "name": "एना व्हाइट",
-        "role": "कंप्यूटर विज्ञान शिक्षक",
-        "bio": "9 वर्षों से कंप्यूटर विज्ञान पढ़ा रहे हैं।",
-        "photo": "/images/uploads/faculty-11.jpg"
-      },
-      {
-        "name": "टॉम हैरिस",
-        "role": "पुस्तकालयाध्यक्ष",
-        "bio": "15 वर्षों से स्कूल पुस्तकालय का प्रबंधन।",
-        "photo": "/images/uploads/faculty-12.jpg"
-      }
-    ],
-    "toppers": [
-      {
-        "name": "रवि शर्मा",
-        "position": "10वीं बोर्ड - प्रथम",
-        "percentage": "98%",
-        "photo": "/images/uploads/topper-1.jpg"
-      },
-      {
-        "name": "प्रिया गुप्ता",
-        "position": "10वीं बोर्ड - द्वितीय",
-        "percentage": "96%",
-        "photo": "/images/uploads/topper-2.jpg"
-      },
-      {
-        "name": "अमित कुमार",
-        "position": "10वीं बोर्ड - तृतीय",
-        "percentage": "94%",
-        "photo": "/images/uploads/topper-3.jpg"
-      },
-      {
-        "name": "नेहा सिंह",
-        "position": "12वीं बोर्ड - प्रथम",
-        "percentage": "97%",
-        "photo": "/images/uploads/topper-4.jpg"
-      },
-      {
-        "name": "करण वर्मा",
-        "position": "12वीं बोर्ड - द्वितीय",
-        "percentage": "95%",
-        "photo": "/images/uploads/topper-5.jpg"
-      },
-      {
-        "name": "सुमन यादव",
-        "position": "12वीं बोर्ड - तृतीय",
-        "percentage": "93%",
-        "photo": "/images/uploads/topper-6.jpg"
-      }
-    ],
+    "faculty": [],
+    "toppers": [],
     "toppersTitle": "हमारे टॉपर्स",
     "bioTitle": "जीएसएसएस बुधवाली के बारे में",
     "bioContent": "जीएसएसएस बुधवाली, बुढ़वाली, राजस्थान में एक प्रमुख सरकारी वरिष्ठ माध्यमिक विद्यालय है। हम गुणवत्तापूर्ण शिक्षा प्रदान करने और छात्रों के समग्र विकास को बढ़ावा देने के लिए प्रतिबद्ध हैं।",
@@ -272,7 +162,7 @@
       "image": "/images/uploads/img_8453.webp"
     }
   ],
-  "en_schoolName": "Govt. Senior Secondary School, Budhwali",
+  "en_schoolName": "Govt. Senior Secondary School Budhwali",
   "mapLink": "https://maps.app.goo.gl/yDEVzpdAfPciiMqh9",
   "results": {
     "totalStudents": 49,
@@ -281,5 +171,5 @@
     "passPercentage": "100%"
   },
   "headerBackground": "/images/uploads/ashok-stambh.png",
-  "hi_schoolName": "राजकीय उच्च माध्यमिक विद्यालय, बुधवाली"
+  "hi_schoolName": "राजकीय उच्च माध्यमिक विद्यालय बुधवाली"
 }
