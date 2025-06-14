@@ -36,13 +36,13 @@
       },
       {
         "name": "Prakash Kumar",
-        "role": "Science Teacher",
+        "role": "Senior Science Teacher",
         "bio": "10 years in science education.",
         "photo": "/images/uploads/prakash-.webp"
       },
       {
         "name": "Sushil Kumar Bijarnia",
-        "role": "Hindi Teacher",
+        "role": "Senior Hindi Teacher",
         "bio": "8 years experience of teaching Hindi.",
         "photo": "/images/uploads/sushil.webp"
       },
@@ -144,13 +144,13 @@
   },
   "slideshow": [
     {
+      "image": "/images/uploads/img_8502.webp"
+    },
+    {
       "image": "/images/uploads/img_8503.webp"
     },
     {
       "image": "/images/uploads/f901e926-77a3-4c1f-b3ee-773b12b7a8d0.webp"
-    },
-    {
-      "image": "/images/uploads/img_8502.webp"
     },
     {
       "image": "/images/uploads/img_8453.webp"
